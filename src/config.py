@@ -36,11 +36,15 @@ class Settings(BaseSettings):
         return local
 
     # Vector Store
+    qdrant_host: str = Field(default="localhost")
+    qdrant_port: int = Field(default=6333)
     qdrant_collection_name: str = Field(default="menu_dishes")
 
     # Embedding
     embedding_model: str = Field(default="text-embedding-3-small")
     embedding_dimensions: int = Field(default=1536)
+    embedding_name: str = Field(default="openai")
+    embedding_batch_size: int = Field(default=50, ge=1, le=2048)
 
     # LLM
     llm_model: str = Field(default="gpt-4o-mini")

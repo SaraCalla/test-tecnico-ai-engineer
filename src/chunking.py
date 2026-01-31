@@ -1,4 +1,5 @@
 import json
+import uuid
 
 from datapizza.type import Chunk
 
@@ -41,8 +42,7 @@ def menus_to_chunks(menus: list[MenuData]) -> list[Chunk]:
     - text: natural-language description with full context
     - metadata: structured fields (dish_id, restaurant, planet, chef,
       ingredients, techniques, licenses, ltk, source_file)
-    - id: "dish_{dish_id}" for dishes found in the mapping, or
-      "dish_unknown_{restaurant}_{dish_name}" for unmatched dishes
+    - id: deterministic UUID derived from dish name
     """
     dish_ids = load_dish_id_mapping()
     chunks: list[Chunk] = []
@@ -50,11 +50,7 @@ def menus_to_chunks(menus: list[MenuData]) -> list[Chunk]:
     for menu in menus:
         for dish in menu.dishes:
             dish_id = dish_ids.get(dish.name)
-
-            if dish_id is not None:
-                chunk_id = f"dish_{dish_id}"
-            else:
-                chunk_id = f"dish_unknown_{menu.restaurant}_{dish.name}"
+            chunk_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, dish.name))
 
             chunk = Chunk(
                 id=chunk_id,
