@@ -1,0 +1,19 @@
+[project]
+name = "datapizza-assignement"
+version = "0.1.0"
+description = "Intergalactic Culinary Assistant - RAG system for restaurant recommendations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "pandas>=2.2.0",
+    "pypdf>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+    "pytest>=8.0.0",
+]
