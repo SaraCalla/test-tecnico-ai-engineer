@@ -13,7 +13,8 @@ class Settings(BaseSettings):
     )
 
     # API Keys
-    openai_api_key: str = Field(..., description="OpenAI API key for embeddings")
+    openai_api_key: str = Field(..., description="OpenAI API key for embeddings and LLM")
+    cohere_api_key: str = Field(..., description="Cohere API key for reranking")
 
     # Paths
     project_root: Path = Field(
@@ -52,6 +53,10 @@ class Settings(BaseSettings):
 
     # Retrieval
     retrieval_top_k: int = Field(default=20, ge=1, le=100)
+
+    # Reranker
+    reranker_model: str = Field(default="rerank-v3.5")
+    reranker_top_n: int = Field(default=10, ge=1, le=100)
 
     # Output
     output_dir: Path | None = Field(default=None)

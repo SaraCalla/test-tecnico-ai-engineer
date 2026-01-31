@@ -10,6 +10,7 @@ dependencies = [
     "pypdf>=4.0.0",
     "datapizza-ai>=0.0.9",
     "datapizza-ai-clients-google>=0.0.7",
+    "datapizza-ai-rerankers-cohere>=0.0.4",
 ]
 
 [tool.setuptools.packages.find]
