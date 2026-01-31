@@ -7,9 +7,13 @@ requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.5.0",
     "pydantic-settings>=2.1.0",
-    "pandas>=2.2.0",
     "pypdf>=4.0.0",
+    "datapizza-ai>=0.0.9",
+    "datapizza-ai-clients-google>=0.0.7",
 ]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
 
 [project.optional-dependencies]
 dev = [
