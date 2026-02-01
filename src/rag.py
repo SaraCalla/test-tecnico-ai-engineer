@@ -7,7 +7,7 @@ from datapizza.modules.rerankers.cohere import CohereReranker
 from datapizza.type import Chunk
 from datapizza.vectorstores.qdrant import QdrantVectorstore
 
-from src.chunking import load_dish_id_mapping
+from src.parsing import load_dish_id_mapping
 from src.config import settings
 
 _ANSWER_PROMPT = """\

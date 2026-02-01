@@ -1,11 +1,9 @@
-"""Run the RAG pipeline on all questions, generate submission CSV, and evaluate."""
-
+import argparse
 import csv
 import time
 
 from src.config import settings
 from src.evaluation import main as evaluate_submission
-from src.rag import RAGPipeline
 
 
 def load_questions() -> list[dict]:
@@ -27,9 +25,22 @@ def load_ground_truth() -> dict[int, list[int]]:
     return gt
 
 
-def run_pipeline(questions: list[dict]) -> list[dict]:
-    """Run the RAG pipeline on all questions. Returns list of {row_id, result}."""
-    pipeline = RAGPipeline()
+def build_pipeline(name: str):
+    """Instantiate the chosen pipeline. All pipelines implement .query(str) -> list[int]."""
+    if name == "rag":
+        from src.rag import RAGPipeline
+
+        return RAGPipeline()
+    elif name == "structured":
+        from src.structured_pipeline import StructuredPipeline
+
+        return StructuredPipeline()
+    else:
+        raise ValueError(f"Unknown pipeline: {name}")
+
+
+def run_pipeline(pipeline, questions: list[dict]) -> list[dict]:
+    """Run a pipeline on all questions. Returns list of {row_id, result}."""
     ground_truth = load_ground_truth()
     results = []
 
@@ -64,9 +75,19 @@ def save_submission(results: list[dict]) -> str:
 
 
 def main():
-    print("=== Running RAG pipeline ===\n")
+    parser = argparse.ArgumentParser(description="Run pipeline and evaluate.")
+    parser.add_argument(
+        "--pipeline",
+        choices=["rag", "structured"],
+        default="structured",
+        help="Which pipeline to use (default: structured)",
+    )
+    args = parser.parse_args()
+
+    print(f"=== Running {args.pipeline} pipeline ===\n")
+    pipeline = build_pipeline(args.pipeline)
     questions = load_questions()
-    results = run_pipeline(questions)
+    results = run_pipeline(pipeline, questions)
 
     submission_path = save_submission(results)
     print(f"\nSubmission saved to: {submission_path}")

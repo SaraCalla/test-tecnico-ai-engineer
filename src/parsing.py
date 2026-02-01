@@ -60,6 +60,12 @@ def normalize_quotes(text: str) -> str:
 # ── Canonical dish names ────────────────────────────────────────────
 
 
+def load_dish_id_mapping() -> dict[str, int]:
+    """Load dish_mapping.json: canonical name -> dish ID."""
+    with open(settings.dish_mapping_path) as f:
+        return json.load(f)
+
+
 @lru_cache(maxsize=1)
 def load_canonical_dish_names() -> dict[str, str]:
     """Load dish_mapping.json and return a normalized-name → canonical-name lookup.

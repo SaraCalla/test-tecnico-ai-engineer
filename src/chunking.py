@@ -1,16 +1,8 @@
-import json
 import uuid
 
 from datapizza.type import Chunk
 
-from src.config import settings
-from src.parsing import MenuData
-
-
-def load_dish_id_mapping() -> dict[str, int]:
-    """Load dish_mapping.json: canonical name -> dish ID."""
-    with open(settings.dish_mapping_path) as f:
-        return json.load(f)
+from src.parsing import MenuData, load_dish_id_mapping
 
 
 def _dish_chunk_text(dish, menu: MenuData) -> str:
