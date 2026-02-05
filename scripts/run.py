@@ -92,6 +92,9 @@ def main():
     submission_path = save_submission(results)
     print(f"\nSubmission saved to: {submission_path}")
 
+    if hasattr(pipeline, "save_log"):
+        pipeline.save_log()
+
     print("\n=== Evaluating submission ===\n")
     evaluate_submission(["--submission", submission_path], standalone_mode=False)
 
