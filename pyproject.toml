@@ -1,18 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "datapizza-assignement"
+name = "test-tecnico-ai-engineer"
 version = "0.1.0"
-description = "Intergalactic Culinary Assistant - RAG system for restaurant recommendations"
+description = "Dataset, evaluation scripts and metrics (Jaccard similarity) for the AI engineer technical test."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [
+  { name = "Sisco" },
+]
 dependencies = [
+    "click>=8.1.8",
+    "pandas>=2.0.0",
     "pydantic>=2.5.0",
     "pydantic-settings>=2.1.0",
     "pypdf>=4.0.0",
     "datapizza-ai>=0.0.9",
     "datapizza-ai-clients-google>=0.0.7",
-    "datapizza-ai-rerankers-cohere>=0.0.4",
-    "pandas>=3.0.0",
-    "click>=8.3.1",
+    "datapizza-ai-rerankers-cohere>=0.0.4"
 ]
 
 [tool.setuptools.packages.find]
