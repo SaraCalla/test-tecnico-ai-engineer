@@ -1,5 +1,3 @@
-"""PDF parsing: extract structured menu data using pypdf + OpenAI."""
-
 import difflib
 import json
 import re

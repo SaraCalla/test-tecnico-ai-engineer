@@ -49,7 +49,7 @@ class Settings(BaseSettings):
 
     # LLM
     llm_model: str = Field(default="gpt-4o-mini")
-    llm_temperature: float = Field(default=0.1, ge=0.0, le=2.0)
+    llm_temperature: float = Field(default=0.0, ge=0.0, le=2.0)
 
     # Retrieval
     retrieval_top_k: int = Field(default=20, ge=1, le=100)

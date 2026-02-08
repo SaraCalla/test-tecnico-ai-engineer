@@ -1,5 +1,3 @@
-"""Auxiliary knowledge: planet distances and technique categories from the Manual."""
-
 import json
 
 import pandas as pd
