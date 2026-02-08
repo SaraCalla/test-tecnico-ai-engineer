@@ -26,6 +26,11 @@ def _parse_grade(grade_str: str) -> int:
     return 0
 
 
+def _lower_list(items: list[str]) -> list[str]:
+    """Lowercase all strings in a list."""
+    return [s.lower() for s in items]
+
+
 def apply_filters(df: pd.DataFrame, filters: dict) -> list[int]:
     """Apply parsed filters to the dishes DataFrame, return matching dish IDs."""
     mask = pd.Series(True, index=df.index)
@@ -33,53 +38,57 @@ def apply_filters(df: pd.DataFrame, filters: dict) -> list[int]:
     # --- Ingredients include (AND) ---
     if filters.get("ingredients_include"):
         for ing in filters["ingredients_include"]:
-            mask &= df["ingredients"].apply(lambda x: ing in x)
+            ing_l = ing.lower()
+            mask &= df["ingredients"].apply(lambda x, v=ing_l: v in _lower_list(x))
 
     # --- Ingredients exclude (NOT) ---
     if filters.get("ingredients_exclude"):
         for ing in filters["ingredients_exclude"]:
-            mask &= df["ingredients"].apply(lambda x: ing not in x)
+            ing_l = ing.lower()
+            mask &= df["ingredients"].apply(lambda x, v=ing_l: v not in _lower_list(x))
 
     # --- Techniques include (AND) ---
     if filters.get("techniques_include"):
         for tech in filters["techniques_include"]:
-            mask &= df["techniques"].apply(lambda x: tech in x)
+            tech_l = tech.lower()
+            mask &= df["techniques"].apply(lambda x, v=tech_l: v in _lower_list(x))
 
     # --- Techniques exclude (NOT) ---
     if filters.get("techniques_exclude"):
         for tech in filters["techniques_exclude"]:
-            mask &= df["techniques"].apply(lambda x: tech not in x)
+            tech_l = tech.lower()
+            mask &= df["techniques"].apply(lambda x, v=tech_l: v not in _lower_list(x))
 
     # --- Ingredients any (OR) ---
     if filters.get("ingredients_any"):
-        candidates = filters["ingredients_any"]
+        candidates = [c.lower() for c in filters["ingredients_any"]]
         mask &= df["ingredients"].apply(
-            lambda x: any(ing in x for ing in candidates)
+            lambda x: any(ing in _lower_list(x) for ing in candidates)
         )
 
     # --- Techniques any (OR) ---
     if filters.get("techniques_any"):
-        candidates = filters["techniques_any"]
+        candidates = [c.lower() for c in filters["techniques_any"]]
         mask &= df["techniques"].apply(
-            lambda x: any(tech in x for tech in candidates)
+            lambda x: any(tech in _lower_list(x) for tech in candidates)
         )
 
     # --- Min ingredients from (at least N of M) ---
     mif = filters.get("min_ingredients_from")
     if mif and mif.get("candidates") and mif.get("min_count"):
-        candidates = mif["candidates"]
+        candidates = [c.lower() for c in mif["candidates"]]
         min_count = mif["min_count"]
         mask &= df["ingredients"].apply(
-            lambda x: sum(1 for ing in candidates if ing in x) >= min_count
+            lambda x: sum(1 for ing in candidates if ing in _lower_list(x)) >= min_count
         )
 
     # --- Restaurant ---
     if filters.get("restaurant"):
-        mask &= df["restaurant"] == filters["restaurant"]
+        mask &= df["restaurant"].str.lower() == filters["restaurant"].lower()
 
     # --- Planet ---
     if filters.get("planet"):
-        mask &= df["planet"] == filters["planet"]
+        mask &= df["planet"].str.lower() == filters["planet"].lower()
 
     # --- License filter ---
     lf = filters.get("license_filter")

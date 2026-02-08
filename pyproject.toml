@@ -19,7 +19,8 @@ dependencies = [
     "pydantic-settings>=2.1.0",
     "pypdf>=4.0.0",
     "datapizza-ai>=0.0.9",
-    "datapizza-ai-rerankers-cohere>=0.0.4"
+    "datapizza-ai-rerankers-cohere>=0.0.4",
+    "loguru>=0.7.0"
 ]
 
 [tool.setuptools.packages.find]

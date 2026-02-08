@@ -7,8 +7,9 @@ from datapizza.modules.rerankers.cohere import CohereReranker
 from datapizza.type import Chunk
 from datapizza.vectorstores.qdrant import QdrantVectorstore
 
-from src.parsing import load_dish_id_mapping
 from src.config import settings
+from src.logger import logger
+from src.parsing import load_dish_id_mapping
 
 _ANSWER_PROMPT = """\
 You are an assistant that answers questions about intergalactic restaurant dishes.
@@ -80,7 +81,7 @@ class RAGPipeline:
             except Exception as e:
                 if "429" in str(e) or "TooManyRequests" in type(e).__name__:
                     wait = 60 * (attempt + 1)
-                    print(f"    Rate limited, waiting {wait}s...")
+                    logger.warning(f"    Rate limited, waiting {wait}s...")
                     time.sleep(wait)
                 else:
                     raise
@@ -112,16 +113,16 @@ class RAGPipeline:
             if dish_id is not None:
                 ids.append(dish_id)
             else:
-                print(f"    [warn] LLM returned unknown dish: '{name}'")
+                logger.warning(f"    LLM returned unknown dish: '{name}'")
         return ids
 
     def query(self, question: str) -> list[int]:
         """Full pipeline: question -> retrieve -> rerank -> answer -> dish IDs."""
         chunks = self.retrieve(question)
-        print(f"       retrieved: {[c.metadata.get('dish_id') for c in chunks]}")
+        logger.debug(f"       retrieved: {[c.metadata.get('dish_id') for c in chunks]}")
         reranked = self.rerank(question, chunks)
-        print(f"       reranked: {[c.metadata.get('dish_id') for c in reranked]}")
+        logger.debug(f"       reranked: {[c.metadata.get('dish_id') for c in reranked]}")
         dish_names = self.answer(question, reranked)
         ids = self.names_to_ids(dish_names)
-        print(f"       llm answer: {ids}")
+        logger.debug(f"       llm answer: {ids}")
         return ids

@@ -129,16 +129,16 @@ Requires Qdrant running via Docker:
 docker compose up -d
 
 # 2. Ingest data (parse menus, embed, store - one-time)
-python scripts/ingest.py
+uv run python scripts/ingest.py
 
 # 3. Run the pipeline
-python scripts/run.py --pipeline rag
+uv run python scripts/run.py --pipeline rag
 ```
 
 ### Structured Pipeline (improved, default)
 
 ```bash
-python scripts/run.py --pipeline structured
+uv run python scripts/run.py --pipeline structured
 ```
 
 This will:
@@ -152,7 +152,7 @@ This will:
 ### Evaluate a submission manually
 
 ```bash
-python src/evaluation.py --submission outputs/submission.csv
+uv run python src/evaluation.py --submission outputs/submission.csv
 ```
 
 ---

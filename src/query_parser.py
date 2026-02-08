@@ -1,11 +1,9 @@
-import json
-import re
-
 import pandas as pd
 from datapizza.clients.openai import OpenAIClient
 
 from src.config import settings
 from src.knowledge import load_technique_categories
+from src.parsing import parse_json_response
 
 _PARSER_PROMPT_TEMPLATE = """\
 You are a query parser for an intergalactic restaurant database.
@@ -114,9 +112,4 @@ class QueryParser:
         prompt = self._build_prompt(question)
         response = self.client.invoke(prompt)
 
-        raw = response.text.strip()
-        if raw.startswith("```"):
-            raw = re.sub(r"^```(?:json)?\n?", "", raw)
-            raw = re.sub(r"\n?```$", "", raw)
-
-        return json.loads(raw)
+        return parse_json_response(response.text)

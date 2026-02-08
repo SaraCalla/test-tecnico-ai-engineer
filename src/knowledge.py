@@ -4,6 +4,8 @@ import pandas as pd
 from pypdf import PdfReader
 
 from src.config import settings
+from src.logger import logger
+from src.parsing import parse_json_response
 
 
 # ── Planet distances ───────────────────────────────────────────────
@@ -67,13 +69,7 @@ def _extract_technique_categories_from_pdf() -> dict[str, list[str]]:
     )
     response = client.invoke(_TECHNIQUE_EXTRACTION_PROMPT + text)
 
-    raw = response.text.strip()
-    if raw.startswith("```"):
-        import re
-        raw = re.sub(r"^```(?:json)?\n?", "", raw)
-        raw = re.sub(r"\n?```$", "", raw)
-
-    return json.loads(raw)
+    return parse_json_response(response.text)
 
 
 def load_technique_categories(
@@ -90,13 +86,13 @@ def load_technique_categories(
         with open(cache_path) as f:
             return json.load(f)
 
-    print("Extracting technique categories from Manuale di Cucina...")
+    logger.info("Extracting technique categories from Manuale di Cucina...")
     categories = _extract_technique_categories_from_pdf()
 
     cache_path.parent.mkdir(exist_ok=True, parents=True)
     with open(cache_path, "w") as f:
         json.dump(categories, f, indent=2, ensure_ascii=False)
-    print(f"  Cached {len(categories)} categories to {cache_path}")
+    logger.info(f"  Cached {len(categories)} categories to {cache_path}")
 
     return categories
 

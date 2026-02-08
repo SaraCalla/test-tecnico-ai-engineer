@@ -4,6 +4,7 @@ import time
 
 from src.config import settings
 from src.evaluation import main as evaluate_submission
+from src.logger import logger
 
 
 def load_questions() -> list[dict]:
@@ -50,7 +51,7 @@ def run_pipeline(pipeline, questions: list[dict]) -> list[dict]:
         difficulty = q["difficoltà"]
         expected = ground_truth.get(row_id, [])
 
-        print(f"\n  Q{row_id:>3} [{difficulty:<10}] {question}")
+        logger.info(f"\n  Q{row_id:>3} [{difficulty:<10}] {question}")
 
         start = time.time()
         predicted_ids = pipeline.query(question)
@@ -59,7 +60,7 @@ def run_pipeline(pipeline, questions: list[dict]) -> list[dict]:
         result_str = ",".join(str(d) for d in predicted_ids)
         results.append({"row_id": row_id, "result": result_str})
 
-        print(f"       -> expected={expected}  predicted={sorted(predicted_ids)}  ({elapsed:.1f}s)")
+        logger.info(f"       -> expected={expected}  predicted={sorted(predicted_ids)}  ({elapsed:.1f}s)")
 
     return results
 
@@ -84,18 +85,18 @@ def main():
     )
     args = parser.parse_args()
 
-    print(f"=== Running {args.pipeline} pipeline ===\n")
+    logger.info(f"=== Running {args.pipeline} pipeline ===\n")
     pipeline = build_pipeline(args.pipeline)
     questions = load_questions()
     results = run_pipeline(pipeline, questions)
 
     submission_path = save_submission(results)
-    print(f"\nSubmission saved to: {submission_path}")
+    logger.info(f"\nSubmission saved to: {submission_path}")
 
     if hasattr(pipeline, "save_log"):
         pipeline.save_log()
 
-    print("\n=== Evaluating submission ===\n")
+    logger.info("\n=== Evaluating submission ===\n")
     evaluate_submission(["--submission", submission_path], standalone_mode=False)
 
 

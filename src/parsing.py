@@ -10,6 +10,7 @@ from pydantic import BaseModel
 from pypdf import PdfReader
 
 from src.config import settings
+from src.logger import logger
 
 
 # ── Data models ──────────────────────────────────────────────────────
@@ -95,7 +96,7 @@ def _get_llm_client():
     )
 
 
-def _parse_json_response(text: str) -> dict:
+def parse_json_response(text: str) -> dict:
     """Strip markdown fences and parse JSON from an LLM response."""
     text = text.strip()
     if text.startswith("```"):
@@ -310,18 +311,18 @@ def _print_validation_summary(report: MenuValidationReport) -> None:
         parts.append(f"{report.fuzzy_matches} fuzzy-corrected")
     if report.unmatched > 0:
         parts.append(f"{report.unmatched} UNMATCHED")
-    print(f"    [validation] {', '.join(parts)}")
+    logger.info(f"    [validation] {', '.join(parts)}")
 
     for d in report.details:
         if d.match_type == "fuzzy":
-            print(
+            logger.info(
                 f"      ~ '{d.original_name}' -> '{d.canonical_name}' "
                 f"(score={d.similarity_score:.2f})"
             )
         elif d.match_type == "unmatched":
-            print(f"      ! '{d.original_name}' has NO canonical match")
+            logger.warning(f"      ! '{d.original_name}' has NO canonical match")
             for name, score in d.candidates[:3]:
-                print(f"        candidate: '{name}' (score={score:.2f})")
+                logger.info(f"        candidate: '{name}' (score={score:.2f})")
 
 
 def _validate_and_report(menus: list[MenuData]) -> None:
@@ -338,9 +339,9 @@ def _validate_and_report(menus: list[MenuData]) -> None:
             _print_validation_summary(report)
 
     if total_unmatched == 0 and total_fuzzy == 0:
-        print("  [validation] All cached dish names match canonical names")
+        logger.info("  [validation] All cached dish names match canonical names")
     else:
-        print(
+        logger.info(
             f"  [validation] Summary: {total_fuzzy} fuzzy corrections, "
             f"{total_unmatched} unmatched across all cached menus"
         )
@@ -356,14 +357,14 @@ def _print_overall_validation_summary(
     fuzzy = sum(r.fuzzy_matches for r in reports)
     unmatched = sum(r.unmatched for r in reports)
 
-    print("\n--- Validation Summary ---")
-    print(f"  Total dishes:        {total}")
-    print(f"  Exact matches:       {exact}")
-    print(f"  Normalized matches:  {normalized}")
-    print(f"  Fuzzy corrections:   {fuzzy}")
-    print(f"  Unmatched:           {unmatched}")
+    logger.info("\n--- Validation Summary ---")
+    logger.info(f"  Total dishes:        {total}")
+    logger.info(f"  Exact matches:       {exact}")
+    logger.info(f"  Normalized matches:  {normalized}")
+    logger.info(f"  Fuzzy corrections:   {fuzzy}")
+    logger.info(f"  Unmatched:           {unmatched}")
     if unmatched > 0:
-        print(
+        logger.warning(
             f"  WARNING: {unmatched} dish(es) could not be matched "
             "to any canonical name"
         )
@@ -388,7 +389,7 @@ def parse_menu_pdf(
     raw_text = extract_pdf_text(pdf_path)
     prompt = build_extraction_prompt() + raw_text
     response = client.invoke(prompt)
-    data = _parse_json_response(response.text)
+    data = parse_json_response(response.text)
     data["source_file"] = pdf_path.name
 
     menu = MenuData(**data)
@@ -418,33 +419,33 @@ def parse_all_menus(
     # Load existing cache (if any)
     cached_menus: dict[str, dict] = {}
     if cache_path.exists():
-        print(f"Loading existing cache from {cache_path}")
+        logger.info(f"Loading existing cache from {cache_path}")
         with open(cache_path) as f:
             data = json.load(f)
         cached_menus = {m["source_file"]: m for m in data}
-        print(f"  Found {len(cached_menus)} cached menus")
+        logger.info(f"  Found {len(cached_menus)} cached menus")
 
     # Identify which PDFs need parsing
     pdf_files = sorted(menu_dir.glob("*.pdf"))
     to_parse = [p for p in pdf_files if p.name not in cached_menus]
 
     if not to_parse:
-        print("All menus already cached!")
+        logger.info("All menus already cached!")
         menus = [MenuData(**m) for m in cached_menus.values()]
         _validate_and_report(menus)
         return menus
 
-    print(f"Need to parse {len(to_parse)}/{len(pdf_files)} menus\n")
+    logger.info(f"Need to parse {len(to_parse)}/{len(pdf_files)} menus\n")
 
     # Parse missing PDFs with incremental saving
     client = _get_llm_client()
 
     for i, pdf_path in enumerate(to_parse):
-        print(f"  [{i + 1}/{len(to_parse)}] Parsing {pdf_path.name}...")
+        logger.info(f"  [{i + 1}/{len(to_parse)}] Parsing {pdf_path.name}...")
         try:
             menu, report = parse_menu_pdf(pdf_path, client=client)
             cached_menus[pdf_path.name] = menu.model_dump()
-            print(f"    -> {len(menu.dishes)} dishes, planet={menu.planet}")
+            logger.info(f"    -> {len(menu.dishes)} dishes, planet={menu.planet}")
 
             if report:
                 _print_validation_summary(report)
@@ -458,12 +459,12 @@ def parse_all_menus(
                     indent=2,
                     ensure_ascii=False,
                 )
-            print(f"    Saved to cache ({len(cached_menus)}/{len(pdf_files)} total)")
+            logger.info(f"    Saved to cache ({len(cached_menus)}/{len(pdf_files)} total)")
 
         except Exception as e:
-            print(f"    FAILED: {e}")
+            logger.error(f"    FAILED: {e}")
 
-    print(f"\nParsing complete! {len(cached_menus)} menus in cache")
+    logger.info(f"\nParsing complete! {len(cached_menus)} menus in cache")
     return [MenuData(**m) for m in cached_menus.values()]
 
 

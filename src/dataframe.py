@@ -1,5 +1,6 @@
 import pandas as pd
 
+from src.logger import logger
 from src.parsing import MenuData, load_dish_id_mapping, parse_all_menus
 
 
@@ -36,6 +37,6 @@ def build_dishes_dataframe(menus: list[MenuData] | None = None) -> pd.DataFrame:
     df = pd.DataFrame(rows)
     unmatched = df["dish_id"].isna().sum()
     if unmatched > 0:
-        print(f"  [warn] {unmatched} dishes have no ID in dish_mapping.json")
+        logger.warning(f"  {unmatched} dishes have no ID in dish_mapping.json")
 
     return df
