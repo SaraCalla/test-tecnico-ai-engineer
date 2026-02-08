@@ -51,7 +51,8 @@ def run_pipeline(pipeline, questions: list[dict]) -> list[dict]:
         difficulty = q["difficoltà"]
         expected = ground_truth.get(row_id, [])
 
-        logger.info(f"\n  Q{row_id:>3} [{difficulty:<10}] {question}")
+        logger.info("")
+        logger.info(f"  Q{row_id:>3} [{difficulty:<10}] {question}")
 
         start = time.time()
         predicted_ids = pipeline.query(question)
@@ -65,9 +66,10 @@ def run_pipeline(pipeline, questions: list[dict]) -> list[dict]:
     return results
 
 
-def save_submission(results: list[dict]) -> str:
+def save_submission(results: list[dict], pipeline_name: str = "") -> str:
     """Save results as a submission CSV. Returns the file path."""
-    submission_path = settings.output_dir / "submission.csv"
+    suffix = f"_{pipeline_name}" if pipeline_name else ""
+    submission_path = settings.output_dir / f"submission{suffix}.csv"
     with open(submission_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["row_id", "result"])
         writer.writeheader()
@@ -85,18 +87,22 @@ def main():
     )
     args = parser.parse_args()
 
-    logger.info(f"=== Running {args.pipeline} pipeline ===\n")
+    logger.info(f"=== Running {args.pipeline} pipeline ===")
+    logger.info("")
     pipeline = build_pipeline(args.pipeline)
     questions = load_questions()
     results = run_pipeline(pipeline, questions)
 
-    submission_path = save_submission(results)
-    logger.info(f"\nSubmission saved to: {submission_path}")
+    submission_path = save_submission(results, pipeline_name=args.pipeline)
+    logger.info("")
+    logger.info(f"Submission saved to: {submission_path}")
 
     if hasattr(pipeline, "save_log"):
         pipeline.save_log()
 
-    logger.info("\n=== Evaluating submission ===\n")
+    logger.info("")
+    logger.info("=== Evaluating submission ===")
+    logger.info("")
     evaluate_submission(["--submission", submission_path], standalone_mode=False)
 
 
