@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Proprietary" }
 authors = [
-  { name = "Sisco" },
+  { name = "SaraCalla" },
 ]
 dependencies = [
     "click>=8.1.8",
@@ -19,7 +19,6 @@ dependencies = [
     "pydantic-settings>=2.1.0",
     "pypdf>=4.0.0",
     "datapizza-ai>=0.0.9",
-    "datapizza-ai-clients-google>=0.0.7",
     "datapizza-ai-rerankers-cohere>=0.0.4"
 ]
 
