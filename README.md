@@ -44,14 +44,17 @@ I evaluated 3 alternatives before choosing this approach:
 │
 ├── src/
 │   ├── config.py           # Settings & paths (Pydantic, loads .env)
-│   ├── parsing.py          # PDF menu extraction via LLM, with validation
+│   ├── models.py           # Pydantic data models (Dish, MenuData, validation results)
+│   ├── normalization.py    # Text normalization & canonical dish name loading
+│   ├── validation.py       # Dish name validation (exact, normalized, fuzzy matching)
+│   ├── parsing.py          # PDF menu extraction via LLM
 │   ├── knowledge.py        # Auxiliary data: distance matrix, technique categories
 │   ├── dataframe.py        # Builds a structured DataFrame from parsed menus
 │   ├── filter_engine.py    # Applies structured JSON filters to the DataFrame
 │   ├── query_parser.py     # LLM-based question -> JSON filter parsing
 │   ├── chunking.py         # Converts menus to embeddings chunks (for RAG)
 │   ├── rag.py              # RAG pipeline (retrieve -> rerank -> answer)
-│   ├── structured_pipeline.py  # Structured filtering pipeline
+│   ├── structured_pipeline.py  # Structured filtering pipeline (receives DataFrame via DI)
 │   ├── evaluation.py       # Computes Jaccard similarity score
 │   └── metrics/
 │       └── jaccard_similarity.py
@@ -152,7 +155,11 @@ This will:
 ### Evaluate a submission manually
 
 ```bash
-uv run python src/evaluation.py --submission outputs/submission.csv
+uv run python src/evaluation.py --submission outputs/submission_rag.csv
+```
+
+```bash
+uv run python src/evaluation.py --submission outputs/submission_structured.csv
 ```
 
 ---
@@ -165,7 +172,7 @@ uv run python src/evaluation.py --submission outputs/submission.csv
 
 ### Dish Name Validation
 
-LLMs don't always return exact names. A three-step validation in `src/parsing.py` runs on each extracted name: exact match, then normalized match (whitespace + quote normalization), then fuzzy match (difflib, 0.85 threshold). Of the ~279 extracted dishes, all but 2 are resolved to canonical names automatically.
+LLMs don't always return exact names. A three-step validation in `src/validation.py` runs on each extracted name: exact match, then normalized match (whitespace + quote normalization), then fuzzy match (difflib, 0.85 threshold). Of the ~279 extracted dishes, all but 2 are resolved to canonical names automatically.
 
 ### Why Structured Search over RAG
 

@@ -33,16 +33,17 @@ def build_pipeline(name: str):
 
         return RAGPipeline()
     elif name == "structured":
+        from src.dataframe import build_dishes_dataframe
         from src.structured_pipeline import StructuredPipeline
 
-        return StructuredPipeline()
+        return StructuredPipeline(build_dishes_dataframe())
     else:
         raise ValueError(f"Unknown pipeline: {name}")
 
 
 def run_pipeline(pipeline, questions: list[dict]) -> list[dict]:
     """Run a pipeline on all questions. Returns list of {row_id, result}."""
-    ground_truth = load_ground_truth()
+    ground_truth = load_ground_truth() #only used for debugging
     results = []
 
     for q in questions:

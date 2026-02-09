@@ -20,21 +20,9 @@ class Settings(BaseSettings):
     project_root: Path = Field(
         default_factory=lambda: Path(__file__).parent.parent,
     )
-    dataset_root: Path | None = Field(default=None)
-
-    @field_validator("dataset_root", mode="before")
-    @classmethod
-    def detect_dataset_root(cls, v, info):
-        if v is not None:
-            return Path(v)
-        project_root = info.data.get("project_root", Path(__file__).parent.parent)
-        local = project_root / "Dataset"
-        if local.exists():
-            return local
-        sibling = project_root.parent / "test-tecnico-ai-engineer" / "Dataset"
-        if sibling.exists():
-            return sibling
-        return local
+    dataset_root: Path = Field(
+        default_factory=lambda: Path(__file__).parent.parent / "Dataset",
+    )
 
     # Vector Store
     qdrant_host: str = Field(default="localhost")
@@ -59,18 +47,16 @@ class Settings(BaseSettings):
     reranker_top_n: int = Field(default=10, ge=1, le=100)
 
     # Output
-    output_dir: Path | None = Field(default=None)
+    output_dir: Path = Field(
+        default_factory=lambda: Path(__file__).parent.parent / "outputs",
+    )
 
-    @field_validator("output_dir", mode="before")
+    @field_validator("output_dir", mode="after")
     @classmethod
-    def set_output_dir(cls, v, info):
-        if v is not None:
-            path = Path(v)
-        else:
-            project_root = info.data.get("project_root", Path(__file__).parent.parent)
-            path = project_root / "outputs"
-        path.mkdir(exist_ok=True, parents=True)
-        return path
+    def ensure_output_dir_exists(cls, v: Path) -> Path:
+        """Create output directory if it doesn't exist."""
+        v.mkdir(exist_ok=True, parents=True)
+        return v
 
     # Computed paths
     @property

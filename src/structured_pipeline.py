@@ -1,7 +1,8 @@
 import json
 
+import pandas as pd
+
 from src.config import settings
-from src.dataframe import build_dishes_dataframe
 from src.filter_engine import apply_filters
 from src.logger import logger
 from src.query_parser import QueryParser
@@ -10,8 +11,8 @@ from src.query_parser import QueryParser
 class StructuredPipeline:
     """Question -> structured filter -> DataFrame lookup -> dish IDs."""
 
-    def __init__(self):
-        self.df = build_dishes_dataframe()
+    def __init__(self, df: pd.DataFrame):
+        self.df = df
         self.parser = QueryParser(self.df)
         self.query_log: list[dict] = []
         logger.info(f"  Loaded {len(self.df)} dishes into DataFrame")
