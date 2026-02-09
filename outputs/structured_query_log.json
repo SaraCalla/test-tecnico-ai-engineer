@@ -170,35 +170,30 @@
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": null,
+      "technique_categories_include": [
+        "sferificazione"
+      ],
       "distance_constraint": null
     },
-    "result_ids": [
-      13,
-      15,
-      51,
-      130,
-      209
-    ]
+    "result_ids": []
   },
   {
     "question": "Quali piatti sono preparati sia con la Marinatura Temporale Sincronizzata che con il Congelamento Bio-Luminiscente Sincronico?",
     "filters": {
-      "ingredients_include": [],
-      "ingredients_exclude": [],
+      "ingredients_include": null,
+      "ingredients_exclude": null,
       "techniques_include": [
-        "Marinatura Temporale Sincronizzata"
-      ],
-      "techniques_exclude": [],
-      "ingredients_any": [],
-      "techniques_any": [
+        "Marinatura Temporale Sincronizzata",
         "Congelamento Bio-Luminiscente Sincronico"
       ],
+      "techniques_exclude": null,
+      "ingredients_any": null,
+      "techniques_any": null,
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": [],
+      "technique_categories_include": null,
       "distance_constraint": null
     },
     "result_ids": [
@@ -226,7 +221,7 @@
     },
     "result_ids": [
       115,
-      184
+      266
     ]
   },
   {
@@ -234,7 +229,7 @@
     "filters": {
       "ingredients_include": [
         "Riso di Cassandra",
-        "Polvere di crononite"
+        "Polvere di Crononite"
       ],
       "ingredients_exclude": null,
       "techniques_include": null,
@@ -248,7 +243,9 @@
       "technique_categories_include": null,
       "distance_constraint": null
     },
-    "result_ids": []
+    "result_ids": [
+      104
+    ]
   },
   {
     "question": "Quali sono i piatti che riescono a fondere la misteriosa Shard di Prisma Stellare con l'intrigante Sale Temporale, creando un'esperienza culinaria al di là del tempo e dello spazio?",
@@ -314,7 +311,10 @@
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
-      "license_filter": null,
+      "license_filter": {
+        "type": "Psionica",
+        "min_grade": 2
+      },
       "technique_categories_include": null,
       "distance_constraint": null
     },
@@ -327,16 +327,16 @@
   {
     "question": "Quali piatti prepari utilizzando esclusivamente la Sferificazione Filamentare a Molecole Vibrazionali e evitando completamente l'Amalgamazione Sintetica Molecolare?",
     "filters": {
-      "ingredients_include": [],
-      "ingredients_exclude": [],
+      "ingredients_include": null,
+      "ingredients_exclude": null,
       "techniques_include": [
-        "Sferificazione filamentare a molecole vibrazionali"
+        "Sferificazione Filamentare a Molecole Vibrazionali"
       ],
       "techniques_exclude": [
         "Amalgamazione Sintetica Molecolare"
       ],
-      "ingredients_any": [],
-      "techniques_any": [],
+      "ingredients_any": null,
+      "techniques_any": null,
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -365,34 +365,32 @@
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": null,
+      "technique_categories_include": [
+        "sferificazione"
+      ],
       "distance_constraint": null
     },
     "result_ids": [
-      10,
-      35,
-      125,
-      147,
-      160,
-      191,
-      217,
-      281
+      103
     ]
   },
   {
     "question": "Quali piatti della nostra collezione sono creati utilizzando la tecnica di Sferificazione con Campi Magnetici Entropici e non contengono Spezie Melange?",
     "filters": {
-      "ingredients_include": null,
+      "ingredients_include": [],
       "ingredients_exclude": [
         "Spezie Melange"
       ],
       "techniques_include": [
         "Sferificazione con campi magnetici entropici"
       ],
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
-      "min_ingredients_from": null,
+      "techniques_exclude": [],
+      "ingredients_any": [],
+      "techniques_any": [],
+      "min_ingredients_from": {
+        "candidates": [],
+        "min_count": 0
+      },
       "restaurant": null,
       "planet": null,
       "license_filter": null,
@@ -471,7 +469,14 @@
       "techniques_exclude": null,
       "ingredients_any": null,
       "techniques_any": null,
-      "min_ingredients_from": null,
+      "min_ingredients_from": {
+        "candidates": [
+          "Carne di Balena spaziale",
+          "Essenza di Tachioni",
+          "Alghe Bioluminescenti"
+        ],
+        "min_count": 3
+      },
       "restaurant": null,
       "planet": null,
       "license_filter": null,
@@ -480,8 +485,7 @@
     },
     "result_ids": [
       54,
-      103,
-      203
+      103
     ]
   },
   {
@@ -498,16 +502,24 @@
       "techniques_exclude": null,
       "ingredients_any": null,
       "techniques_any": null,
-      "min_ingredients_from": null,
+      "min_ingredients_from": {
+        "candidates": [
+          "Erba Pipa",
+          "Funghi Orbitali"
+        ],
+        "min_count": 2
+      },
       "restaurant": null,
       "planet": null,
-      "license_filter": null,
+      "license_filter": {
+        "type": "Psionica",
+        "min_grade": 1
+      },
       "technique_categories_include": null,
       "distance_constraint": null
     },
     "result_ids": [
-      168,
-      241
+      168
     ]
   },
   {
@@ -528,9 +540,7 @@
       "restaurant": null,
       "planet": "Namecc",
       "license_filter": null,
-      "technique_categories_include": [
-        "vapore"
-      ],
+      "technique_categories_include": null,
       "distance_constraint": null
     },
     "result_ids": []
@@ -556,7 +566,9 @@
       "technique_categories_include": null,
       "distance_constraint": null
     },
-    "result_ids": []
+    "result_ids": [
+      149
+    ]
   },
   {
     "question": "Quali piatti, nella nostra tradizione culinaria magica, richiedono l'uso delle Lacrime di Unicorno e sono preparati sia con la tecnica del Taglio Sinaptico Biomimetico che con l'Idro-Cristallizzazione Sonora Quantistica?",
@@ -566,12 +578,13 @@
       ],
       "ingredients_exclude": null,
       "techniques_include": [
-        "Taglio Sinaptico Biomimetico",
-        "Idro-Cristallizzazione Sonora Quantistica"
+        "Taglio Sinaptico Biomimetico"
       ],
       "techniques_exclude": null,
       "ingredients_any": null,
-      "techniques_any": null,
+      "techniques_any": [
+        "Idro-Cristallizzazione Sonora Quantistica"
+      ],
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -625,12 +638,14 @@
       "planet": null,
       "license_filter": null,
       "technique_categories_include": [
-        "tecniche di taglio",
-        "vapore"
+        "taglio"
       ],
       "distance_constraint": null
     },
-    "result_ids": []
+    "result_ids": [
+      34,
+      205
+    ]
   },
   {
     "question": "Quali piatti includono Lattuga Namecciana e Carne di Mucca ma non contengono Teste di Idra?",
@@ -684,6 +699,7 @@
       "distance_constraint": null
     },
     "result_ids": [
+      4,
       17,
       62,
       96,
@@ -737,16 +753,12 @@
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": null,
+      "technique_categories_include": [
+        "tecniche di impasto"
+      ],
       "distance_constraint": null
     },
-    "result_ids": [
-      110,
-      112,
-      180,
-      190,
-      205
-    ]
+    "result_ids": []
   },
   {
     "question": "Quali sono i piatti che combinano Funghi dell’Etere e Erba Pipa senza utilizzare la tecnica della Decostruzione Magnetica Risonante nella loro preparazione?",
@@ -755,13 +767,13 @@
         "Funghi dell'Etere",
         "Erba Pipa"
       ],
-      "ingredients_exclude": [],
-      "techniques_include": [],
+      "ingredients_exclude": null,
+      "techniques_include": null,
       "techniques_exclude": [
         "Decostruzione Magnetica Risonante"
       ],
-      "ingredients_any": [],
-      "techniques_any": [],
+      "ingredients_any": null,
+      "techniques_any": null,
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -778,8 +790,8 @@
         "Salsa Szechuan",
         "Granuli di Nebbia Arcobaleno"
       ],
-      "ingredients_exclude": null,
-      "techniques_include": null,
+      "ingredients_exclude": [],
+      "techniques_include": [],
       "techniques_exclude": [
         "Affumicatura a Stratificazione Quantica"
       ],
@@ -864,10 +876,7 @@
       ],
       "ingredients_any": null,
       "techniques_any": null,
-      "min_ingredients_from": {
-        "candidates": null,
-        "min_count": null
-      },
+      "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
       "license_filter": null,
@@ -984,7 +993,7 @@
   {
     "question": "Quali piatti vengono preparati utilizzando la Congelazione Iperdimensionalmente Stratificata, escludendo quelli che contengono Fibra di Sintetex o Funghi Orbitali?",
     "filters": {
-      "ingredients_include": null,
+      "ingredients_include": [],
       "ingredients_exclude": [
         "Fibra di Sintetex",
         "Funghi Orbitali"
@@ -992,9 +1001,9 @@
       "techniques_include": [
         "Congelazione Iperdimensionalmente Stratificata"
       ],
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
+      "techniques_exclude": [],
+      "ingredients_any": [],
+      "techniques_any": [],
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -1014,7 +1023,7 @@
   {
     "question": "Quali piatti sono preparati utilizzando la tecnica di Grigliatura Psionica Dinamica Ritmica, escludendo quelli che fanno uso del Pane degli Abissi o della Cottura Olografica Quantum Fluttuante?",
     "filters": {
-      "ingredients_include": null,
+      "ingredients_include": [],
       "ingredients_exclude": [
         "Pane degli Abissi"
       ],
@@ -1024,13 +1033,16 @@
       "techniques_exclude": [
         "Cottura Olografica Quantum Fluttuante"
       ],
-      "ingredients_any": null,
-      "techniques_any": null,
-      "min_ingredients_from": null,
+      "ingredients_any": [],
+      "techniques_any": [],
+      "min_ingredients_from": {
+        "candidates": [],
+        "min_count": 0
+      },
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": null,
+      "technique_categories_include": [],
       "distance_constraint": null
     },
     "result_ids": [
@@ -1096,8 +1108,8 @@
   {
     "question": "Quali piatti nella galassia sono preparati esclusivamente con la tecnica di Affumicatura Polarizzata a Freddo Iperbarico, evitando del tutto Fermentazione Psionica Energetica e Congelamento Bio-Luminiscente Sincronico?",
     "filters": {
-      "ingredients_include": [],
-      "ingredients_exclude": [],
+      "ingredients_include": null,
+      "ingredients_exclude": null,
       "techniques_include": [
         "Affumicatura Polarizzata a Freddo Iperbarico"
       ],
@@ -1111,12 +1123,17 @@
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": [
-        "affumicatura"
-      ],
+      "technique_categories_include": null,
       "distance_constraint": null
     },
-    "result_ids": []
+    "result_ids": [
+      61,
+      88,
+      142,
+      147,
+      169,
+      281
+    ]
   },
   {
     "question": "Quali sono i piatti che combinano Carne di Balena spaziale, Teste di Idra, Spaghi del Sole e Carne di Xenodonte nella loro preparazione?",
@@ -1193,7 +1210,9 @@
       "restaurant": null,
       "planet": null,
       "license_filter": null,
-      "technique_categories_include": null,
+      "technique_categories_include": [
+        "cottura sottovuoto"
+      ],
       "distance_constraint": null
     },
     "result_ids": []
@@ -1219,7 +1238,7 @@
       "license_filter": null,
       "technique_categories_include": [
         "affumicatura",
-        "vapore"
+        "cottura a vapore"
       ],
       "distance_constraint": null
     },
@@ -1277,24 +1296,28 @@
   {
     "question": "Quali piatti deliziosi possiamo gustare su Krypton che sfruttano la rivoluzionaria Cryo-Tessitura Energetica Polarizzata?",
     "filters": {
-      "ingredients_include": null,
-      "ingredients_exclude": null,
+      "ingredients_include": [],
+      "ingredients_exclude": [],
       "techniques_include": [
         "Cryo-Tessitura Energetica Polarizzata"
       ],
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
-      "min_ingredients_from": null,
+      "techniques_exclude": [],
+      "ingredients_any": [],
+      "techniques_any": [],
+      "min_ingredients_from": {
+        "candidates": [],
+        "min_count": 0
+      },
       "restaurant": null,
       "planet": "Krypton",
-      "license_filter": null,
+      "license_filter": {
+        "type": "Psionica",
+        "min_grade": 1
+      },
       "technique_categories_include": null,
       "distance_constraint": null
     },
-    "result_ids": [
-      231
-    ]
+    "result_ids": []
   },
   {
     "question": "Quali sono i piatti preparati su Krypton usando la Cottura Sottovuoto Bioma Sintetico?",
@@ -1477,6 +1500,7 @@
       "distance_constraint": null
     },
     "result_ids": [
+      43,
       232,
       254,
       265
@@ -1485,15 +1509,18 @@
   {
     "question": "Quali piatti sono stati creati dallo chef con almeno una licenza Luce di grado 3 utilizzando la tecnica della Cottura Sottovuoto Multirealità Collassante?",
     "filters": {
-      "ingredients_include": null,
-      "ingredients_exclude": null,
+      "ingredients_include": [],
+      "ingredients_exclude": [],
       "techniques_include": [
         "Cottura Sottovuoto Multirealità Collassante"
       ],
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
-      "min_ingredients_from": null,
+      "techniques_exclude": [],
+      "ingredients_any": [],
+      "techniques_any": [],
+      "min_ingredients_from": {
+        "candidates": [],
+        "min_count": 0
+      },
       "restaurant": null,
       "planet": null,
       "license_filter": {
@@ -1594,7 +1621,10 @@
       "min_ingredients_from": null,
       "restaurant": "Cosmica Essenza",
       "planet": null,
-      "license_filter": null,
+      "license_filter": {
+        "type": "Psionica",
+        "min_grade": 1
+      },
       "technique_categories_include": null,
       "distance_constraint": null
     },
@@ -1681,11 +1711,10 @@
       "ingredients_include": null,
       "ingredients_exclude": null,
       "techniques_include": [
-        "Grigliatura Plasma Sintetico Risonante"
-      ],
-      "techniques_exclude": [
+        "Grigliatura Plasma Sintetico Risonante",
         "Affumicatura Polarizzata a Freddo Iperbarico"
       ],
+      "techniques_exclude": null,
       "ingredients_any": null,
       "techniques_any": [
         "Grigliatura Plasma Sintetico Risonante",
@@ -1698,24 +1727,21 @@
       "technique_categories_include": null,
       "distance_constraint": null
     },
-    "result_ids": [
-      52,
-      190
-    ]
+    "result_ids": []
   },
   {
     "question": "Quali piatti possono essere trovati, preparati da uno chef con almeno la licenza P di grado 5, che includono Teste di Idra o che sono realizzati utilizzando la tecnica della Bollitura Entropica Sincronizzata?",
     "filters": {
       "ingredients_include": null,
       "ingredients_exclude": null,
-      "techniques_include": null,
+      "techniques_include": [
+        "Bollitura Entropica Sincronizzata"
+      ],
       "techniques_exclude": null,
       "ingredients_any": [
         "Teste di Idra"
       ],
-      "techniques_any": [
-        "Bollitura Entropica Sincronizzata"
-      ],
+      "techniques_any": null,
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -1763,11 +1789,10 @@
       "techniques_include": [
         "Affumicatura Psionica Sensoriale"
       ],
-      "techniques_exclude": [
-        "Cottura Sottovuoto Multirealità Collassante"
-      ],
+      "techniques_exclude": null,
       "ingredients_any": null,
       "techniques_any": [
+        "Affumicatura Psionica Sensoriale",
         "Cottura Sottovuoto Multirealità Collassante"
       ],
       "min_ingredients_from": null,
@@ -1780,27 +1805,27 @@
       "technique_categories_include": null,
       "distance_constraint": null
     },
-    "result_ids": []
+    "result_ids": [
+      184,
+      218
+    ]
   },
   {
     "question": "Quali piatti, preparati da chef con almeno una licenza Mx di grado 1, utilizzano la tecnica della Congelazione Iperdimensionalmente Stratificata o la Cristallizzazione Temporale Reversiva?",
     "filters": {
-      "ingredients_include": [],
-      "ingredients_exclude": [],
+      "ingredients_include": null,
+      "ingredients_exclude": null,
       "techniques_include": [
         "Congelazione Iperdimensionalmente Stratificata"
       ],
       "techniques_exclude": [
         "Cristallizzazione Temporale Reversiva"
       ],
-      "ingredients_any": [],
+      "ingredients_any": null,
       "techniques_any": [
         "Cristallizzazione Temporale Reversiva"
       ],
-      "min_ingredients_from": {
-        "candidates": [],
-        "min_count": 0
-      },
+      "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
       "license_filter": {
@@ -1819,11 +1844,7 @@
       "ingredients_exclude": null,
       "techniques_include": null,
       "techniques_exclude": null,
-      "ingredients_any": [
-        "Spore Quantiche",
-        "Latte+",
-        "Radici di Singolarità"
-      ],
+      "ingredients_any": null,
       "techniques_any": null,
       "min_ingredients_from": {
         "candidates": [
@@ -1854,7 +1875,11 @@
       "ingredients_exclude": null,
       "techniques_include": null,
       "techniques_exclude": null,
-      "ingredients_any": null,
+      "ingredients_any": [
+        "Ravioli al Vaporeon",
+        "Spaghi del Sole",
+        "Nettare di Sirena"
+      ],
       "techniques_any": null,
       "min_ingredients_from": {
         "candidates": [
@@ -1875,7 +1900,6 @@
       70,
       81,
       116,
-      131,
       141,
       273
     ]
@@ -1914,9 +1938,7 @@
       44,
       71,
       120,
-      121,
       141,
-      155,
       189,
       198,
       247
@@ -1952,8 +1974,7 @@
       "distance_constraint": null
     },
     "result_ids": [
-      78,
-      145
+      78
     ]
   },
   {
@@ -1967,10 +1988,9 @@
       "techniques_exclude": null,
       "ingredients_any": null,
       "techniques_any": [
-        "Cryo-Tessitura Energetica Polarizzata",
         "Congelamento Bio-Luminiscente Sincronico",
-        "Cristallizzazione Temporale Reversiva",
         "Congelazione Iperdimensionalmente Stratificata",
+        "Cristallizzazione Temporale Reversiva",
         "Surgelamento Antimaterico a Risonanza Inversa"
       ],
       "min_ingredients_from": null,
@@ -2000,51 +2020,11 @@
       "planet": null,
       "license_filter": null,
       "technique_categories_include": [
-        "taglio"
+        "tecniche di taglio"
       ],
       "distance_constraint": null
     },
-    "result_ids": [
-      1,
-      46,
-      51,
-      61,
-      67,
-      72,
-      76,
-      78,
-      88,
-      108,
-      118,
-      121,
-      125,
-      126,
-      138,
-      140,
-      151,
-      155,
-      157,
-      182,
-      189,
-      193,
-      194,
-      199,
-      224,
-      227,
-      233,
-      235,
-      239,
-      253,
-      254,
-      256,
-      262,
-      263,
-      266,
-      267,
-      269,
-      275,
-      284
-    ]
+    "result_ids": []
   },
   {
     "question": "Quali piatti preparati su Asgard richiedono la licenza temporale superiore a 0 e includono Farina di Nettuno?",
@@ -2068,7 +2048,6 @@
       "distance_constraint": null
     },
     "result_ids": [
-      168,
       271
     ]
   },
@@ -2098,15 +2077,18 @@
   {
     "question": "Quali piatti, che necessitano almeno della licenza P di grado 2 per essere preparati, serviti in un ristorante su Pandora, utilizzano Spore Quantiche?",
     "filters": {
-      "ingredients_include": [
+      "ingredients_include": [],
+      "ingredients_exclude": [],
+      "techniques_include": [],
+      "techniques_exclude": [],
+      "ingredients_any": [
         "Spore Quantiche"
       ],
-      "ingredients_exclude": null,
-      "techniques_include": null,
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
-      "min_ingredients_from": null,
+      "techniques_any": [],
+      "min_ingredients_from": {
+        "candidates": [],
+        "min_count": 0
+      },
       "restaurant": null,
       "planet": "Pandora",
       "license_filter": {
@@ -2154,18 +2136,16 @@
         "Polvere di Crononite"
       ],
       "techniques_include": [
-        "taglio dimensionale a lame fotofiliche",
-        "taglio a risonanza sonica rigenerativa",
-        "affettamento a pulsazioni quantistiche"
+        "Taglio Dimensionale a Lame Fotofiliche"
       ],
       "techniques_exclude": null,
       "ingredients_any": null,
       "techniques_any": [
-        "cryo-tessitura energetica polarizzata",
-        "congelamento bio-luminiscente sincronico",
-        "cristallizzazione temporale reversiva",
-        "congelazione iperdimensionale stratificata",
-        "surgelamento antimaterico a risonanza inversa"
+        "Cryo-Tessitura Energetica Polarizzata",
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Cristallizzazione Temporale Reversiva",
+        "Congelazione Iperdimensionalmente Stratificata",
+        "Surgelamento Antimaterico a Risonanza Inversa"
       ],
       "min_ingredients_from": null,
       "restaurant": null,
@@ -2187,22 +2167,18 @@
         "Shard di Prisma Stellare"
       ],
       "techniques_include": [
-        "Amalgamazione Sintetica Molecolare"
+        "Amalgamazione Sintetica Molecolare",
+        "Taglio Dimensionale a Lame Fotofiliche"
       ],
       "techniques_exclude": null,
       "ingredients_any": null,
-      "techniques_any": [
-        "Taglio Dimensionale a Lame Fotofiliche",
-        "Taglio a Risonanza Sonica Rigenerativa",
-        "Affettamento a Pulsazioni Quantistiche",
-        "Taglio Sinaptico Biomimetico"
-      ],
+      "techniques_any": null,
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
       "license_filter": null,
       "technique_categories_include": [
-        "tecniche di impasto",
+        "impasto",
         "tecniche di taglio"
       ],
       "distance_constraint": null
@@ -2217,7 +2193,11 @@
         "Fusilli del Vento"
       ],
       "techniques_include": [
-        "Affettamento a Pulsazioni Quantistiche"
+        "Taglio Dimensionale a Lame Fotofiliche",
+        "Taglio a Risonanza Sonica Rigenerativa",
+        "Affettamento a Pulsazioni Quantistiche",
+        "Taglio Sinaptico Biomimetico",
+        "Incisione Elettromagnetica Plasmica"
       ],
       "techniques_exclude": null,
       "ingredients_any": null,
@@ -2230,21 +2210,11 @@
         "min_grade": 1
       },
       "technique_categories_include": [
-        "taglio"
+        "tecniche di taglio"
       ],
       "distance_constraint": null
     },
-    "result_ids": [
-      21,
-      52,
-      57,
-      111,
-      149,
-      158,
-      159,
-      204,
-      247
-    ]
+    "result_ids": []
   },
   {
     "question": "Quali piatti possono essere creati utilizzando una tecnica di surgelamento dal nostro fidato di Sirius Cosmo, necessitano di una licenza temporale non base per essere elaborati e non includono le spezie Melange?",
@@ -2279,47 +2249,14 @@
   {
     "question": "Quali piatti possono essere preparati utilizzando almeno una tecnica di taglio del Manuale di Cucina di Sirius Cosmo e richiedono la licenza G di grado 2 o superiore, escludendo quelli che usano Gnocchi del Crepuscolo?",
     "filters": {
-      "ingredients_include": null,
+      "ingredients_include": [],
       "ingredients_exclude": [
         "Gnocchi del Crepuscolo"
       ],
-      "techniques_include": null,
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": [
-        "Taglio Dimensionale a Lame Fotofiliche",
-        "Taglio a Risonanza Sonica Rigenerativa",
-        "Affettamento a Pulsazioni Quantistiche",
-        "Taglio Sinaptico Biomimetico",
-        "Incisione Elettromagnetica Plasmica"
-      ],
-      "min_ingredients_from": null,
-      "restaurant": null,
-      "planet": null,
-      "license_filter": {
-        "type": "Gravitazionale",
-        "min_grade": 2
-      },
-      "technique_categories_include": [
-        "tecniche di taglio"
-      ],
-      "distance_constraint": null
-    },
-    "result_ids": []
-  },
-  {
-    "question": "Quali piatti, preparati utilizzando almeno una tecnica di taglio citata nel Manuale di Cucina di Sirius Cosmo e che richiedono la licenza G di almeno grado 2 per essere cucinati, non utilizzano la Farina di Nettuno?",
-    "filters": {
-      "ingredients_include": null,
-      "ingredients_exclude": [
-        "Farina di Nettuno"
-      ],
-      "techniques_include": [
-        "Affettamento a Pulsazioni Quantistiche"
-      ],
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
+      "techniques_include": [],
+      "techniques_exclude": [],
+      "ingredients_any": [],
+      "techniques_any": [],
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -2333,24 +2270,118 @@
       "distance_constraint": null
     },
     "result_ids": [
+      3,
+      20,
       21,
+      29,
+      31,
+      32,
+      33,
+      34,
+      36,
+      39,
+      44,
+      51,
       52,
+      53,
+      55,
+      59,
+      62,
+      66,
+      73,
+      79,
+      81,
+      89,
+      99,
+      102,
       111,
+      112,
+      117,
+      121,
+      132,
+      134,
+      135,
+      139,
+      145,
       149,
+      166,
+      173,
+      174,
+      180,
+      187,
+      188,
+      189,
+      190,
+      193,
+      195,
+      196,
+      198,
+      199,
       202,
       204,
-      247
+      208,
+      209,
+      213,
+      216,
+      231,
+      235,
+      237,
+      241,
+      242,
+      243,
+      247,
+      251,
+      256,
+      262,
+      265,
+      266,
+      268,
+      274,
+      277,
+      278,
+      282,
+      284,
+      286
+    ]
+  },
+  {
+    "question": "Quali piatti, preparati utilizzando almeno una tecnica di taglio citata nel Manuale di Cucina di Sirius Cosmo e che richiedono la licenza G di almeno grado 2 per essere cucinati, non utilizzano la Farina di Nettuno?",
+    "filters": {
+      "ingredients_include": null,
+      "ingredients_exclude": [
+        "Farina di Nettuno"
+      ],
+      "techniques_include": null,
+      "techniques_exclude": null,
+      "ingredients_any": null,
+      "techniques_any": null,
+      "min_ingredients_from": null,
+      "restaurant": null,
+      "planet": null,
+      "license_filter": {
+        "type": "Gravitazionale",
+        "min_grade": 2
+      },
+      "technique_categories_include": [
+        "tecniche di taglio"
+      ],
+      "distance_constraint": null
+    },
+    "result_ids": [
+      21,
+      34,
+      242
     ]
   },
   {
     "question": "Quali sono i piatti che necessitano di una licenza di grado 3 o superiore per la preparazione e sono serviti in un ristorante che si trova entro un raggio di 659 anni luce dal pianeta Namecc, Namecc incluso?",
     "filters": {
-      "ingredients_include": [],
-      "ingredients_exclude": [],
-      "techniques_include": [],
-      "techniques_exclude": [],
-      "ingredients_any": [],
-      "techniques_any": [],
+      "ingredients_include": null,
+      "ingredients_exclude": null,
+      "techniques_include": null,
+      "techniques_exclude": null,
+      "ingredients_any": null,
+      "techniques_any": null,
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": null,
@@ -2494,7 +2525,6 @@
       "ingredients_include": null,
       "ingredients_exclude": null,
       "techniques_include": [
-        "Cryo-Tessitura Energetica Polarizzata",
         "Congelamento Bio-Luminiscente Sincronico",
         "Cristallizzazione Temporale Reversiva",
         "Congelazione Iperdimensionalmente Stratificata",
@@ -2521,22 +2551,23 @@
     "question": "Quali piatti speciali sono stati creati utilizzando le tecniche di impasto del Manuale di Cucina di Sirius Cosmo e sono serviti nei ristoranti vicini al pianeta Krypton, entro un raggio di 21 anni luce, Krypton incluso?",
     "filters": {
       "ingredients_include": [],
-      "ingredients_exclude": null,
+      "ingredients_exclude": [],
       "techniques_include": [
         "Amalgamazione Sintetica Molecolare",
         "Impasto Gravitazionale Vorticoso",
+        "Impasto a Campi Magnetici Dualistici",
         "Sinergia Elettro-Osmotica Programmabile",
         "Modellatura Onirica Tetrazionale"
       ],
-      "techniques_exclude": null,
-      "ingredients_any": null,
-      "techniques_any": null,
+      "techniques_exclude": [],
+      "ingredients_any": [],
+      "techniques_any": [],
       "min_ingredients_from": null,
       "restaurant": null,
       "planet": "Krypton",
       "license_filter": null,
       "technique_categories_include": [
-        "tecniche di impasto"
+        "impasto"
       ],
       "distance_constraint": {
         "origin": "Krypton",
@@ -2665,7 +2696,6 @@
       44,
       45,
       46,
-      47,
       48,
       49,
       50,
@@ -2907,7 +2937,6 @@
       44,
       45,
       46,
-      47,
       48,
       49,
       50,
@@ -3145,6 +3174,7 @@
     "result_ids": [
       113,
       132,
+      150,
       209,
       262
     ]
@@ -3194,12 +3224,15 @@
       "planet": null,
       "license_filter": {
         "type": "Psionica",
-        "min_grade": 1
+        "min_grade": 2
       },
       "technique_categories_include": [
         "marinatura"
       ],
-      "distance_constraint": null
+      "distance_constraint": {
+        "origin": "Namecc",
+        "max_ly": 659
+      }
     },
     "result_ids": []
   }

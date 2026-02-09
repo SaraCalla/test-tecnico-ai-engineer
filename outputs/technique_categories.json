@@ -31,7 +31,7 @@
     "cryo-tessitura energetica polarizzata",
     "congelamento bio-luminiscente sincronico",
     "cristallizzazione temporale reversiva",
-    "congelazione iperdimensionale stratificata",
+    "congelazione iperdimensionalmente stratificata",
     "surgelamento antimaterico a risonanza inversa"
   ],
   "bollitura": [
@@ -41,28 +41,29 @@
     "bollitura entropica sincronizzata",
     "idro-cristallizzazione sonora quantistica"
   ],
-  "grigliare": [
-    "grigliatura a energia stellare diV",
+  "grigliatura": [
+    "grigliatura a energia stellare DiV",
     "grigliatura plasma sintetico risonante",
     "grigliatura elettro-molecolare a spaziatura variabile",
     "grigliatura tachionica refrattaria",
     "grigliatura psionica dinamica ritmica"
   ],
-  "forno": [
+  "cottura al forno": [
+    "cottura al forno con paradosso temporale cronospeculare",
     "cottura al forno con paradosso temporale cronospeculare",
     "cottura con microonde entropiche sincronizzate",
     "cottura a forno dinamico inversionale",
     "cottura olografica quantum fluttuante",
     "cottura geomagnetica psicosincronizzata"
   ],
-  "vapore": [
+  "cottura a vapore": [
     "cottura a vapore con flusso di particelle isoarmoniche",
     "cottura a vapore ecodinamico bilanciato",
     "cottura a vapore risonante simbiotico",
     "cottura a vapore termocinetica multipla",
     "cottura idrodinamica autoregolante"
   ],
-  "sottovuoto": [
+  "cottura sottovuoto": [
     "cottura sottovuoto antimateria",
     "cottura sottovuoto multirealità collassante",
     "cottura sottovuoto frugale energeticamente negativa",
@@ -95,6 +96,6 @@
     "taglio a risonanza sonica rigenerativa",
     "affettamento a pulsazioni quantistiche",
     "taglio sinaptico biomimetico",
-    "incisione elettromagnetica plasmatica"
+    "incisione elettromagnetica plasmica"
   ]
 }

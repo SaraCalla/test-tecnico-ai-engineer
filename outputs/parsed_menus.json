@@ -673,7 +673,6 @@
         "ingredients": [
           "Pane di Luce",
           "Cristalli di Memoria",
-          "Lacrime di Andromeda",
           "Radici di Gravità",
           "Liane di Plasmodio",
           "Erba Pipa"
@@ -692,7 +691,6 @@
           "Liane di Plasmodio",
           "Polvere di Stelle",
           "Colonia di Mycoflora",
-          "Funghi dell'Etere",
           "Foglie di Mandragora",
           "Essenza di Speziaria"
         ],
@@ -731,8 +729,8 @@
           "Essenza di Vuoto"
         ],
         "techniques": [
-          "Marinatura Sotto Zero a Polarità Inversa",
           "Cottura a Forno Dinamico Inversionale",
+          "Marinatura Sotto Zero a Polarità Inversa",
           "Affumicatura a Stratificazione Quantica"
         ]
       },
@@ -761,12 +759,12 @@
           "Foglie di Nebulosa",
           "Radici di Singolarità",
           "Uova di Fenice",
-          "Biscotti della Galassia",
           "Frammenti di Supernova"
         ],
         "techniques": [
           "Cottura a Vapore Termocinetica Multipla",
-          "Bollitura Termografica a Rotazione Veloce"
+          "Bollitura Termografica a Rotazione Veloce",
+          "Riduzione di Lacrime di Andromeda e Spezie Melange"
         ]
       },
       {
@@ -795,14 +793,12 @@
           "Radici di Singolarità",
           "Carne di Xenodonte",
           "Pane di Luce",
-          "Lattuga Namecciana",
           "Baccacedro",
-          "Polvere di Crononite"
+          "Crononite"
         ],
         "techniques": [
-          "Bollitura Termografica a Rotazione Veloce",
-          "Cryo-Tessitura Energetica Polarizzata",
-          "Decostruzione Interdimensionale Lovecraftiana"
+          "Cottura a Vapore Termocinetica Multipla",
+          "Bollitura Termografica a Rotazione Veloce"
         ]
       }
     ],
@@ -847,9 +843,9 @@
       {
         "name": "Serenata del Multiverso",
         "ingredients": [
+          "Carne di Balena Spaziale",
           "Frammenti di Supernova",
-          "Liane di Plasmodio",
-          "Carne di Balena spaziale",
+          "Zuppa di Liane di Plasmodio",
           "Fibra di Sintetex",
           "Nettare di Sirena",
           "Essenza di Speziaria"
@@ -865,13 +861,13 @@
       {
         "name": "Euforia Cosmica",
         "ingredients": [
-          "Vero Ghiaccio",
-          "Radici di Singolarità",
-          "Alghe Bioluminescenti",
           "Carne di Drago",
           "Uova di Fenice",
           "Funghi dell’Etere",
-          "Essenza di Vuoto"
+          "Essenza di Vuoto",
+          "Vero Ghiaccio",
+          "Radici di Singolarità",
+          "Alghe Bioluminescenti"
         ],
         "techniques": [
           "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
@@ -882,33 +878,30 @@
       {
         "name": "Galassie Riflesse: Sinfonia del Multiverso",
         "ingredients": [
-          "Polvere di Pulsar",
-          "Radici di Singolarità",
-          "Liane di Plasmodio",
+          "Gnocchi del Crepuscolo",
+          "Riso di Cassandra",
           "Carne di Drago",
           "Teste di Idra",
           "Carne di Mucca",
-          "Pane di Luce",
-          "Gnocchi del Crepuscolo",
-          "Riso di Cassandra",
+          "Liane di Plasmodio",
           "Funghi dell’Etere",
+          "Pane di Luce",
+          "Polvere di Pulsar",
           "Sale Temporale"
         ],
         "techniques": [
           "Cottura Olografica Quantum Fluttuante",
           "Cottura a Vapore Termocinetica Multipla",
           "Affumicatura tramite Big Bang Microcosmico",
-          "Marinatura tramite Reazioni d'Antimateria Diluite",
-          "Cottura a Vapore Ecodinamico Bilanciato"
+          "Marinatura tramite Reazioni d'Antimateria Diluite"
         ]
       },
       {
         "name": "Sinfonia Cosmica di Terracotta",
         "ingredients": [
-          "Polvere di Crononite",
+          "Plasma Vitale",
           "Radici di Gravità",
           "Foglie di Mandragora",
-          "Plasma Vitale",
           "Sale Temporale"
         ],
         "techniques": [
@@ -921,11 +914,11 @@
       {
         "name": "Viaggio Cosmico nel Multiverso",
         "ingredients": [
-          "Shard di Prisma Stellare",
+          "Carne di Mucca",
+          "Essenza di Speziaria",
           "Foglie di Nebulosa",
           "Foglie di Mandragora",
-          "Carne di Mucca",
-          "Essenza di Speziaria"
+          "Shard di Prisma Stellare"
         ],
         "techniques": [
           "Affumicatura Polarizzata a Freddo Iperbarico",
@@ -1501,7 +1494,6 @@
         "name": "Galassia Rinascente",
         "ingredients": [
           "Lattuga Namecciana",
-          "Vero Ghiaccio",
           "Muffa Lunare",
           "Carne di Drago",
           "Uovo di Fenice",
@@ -1564,6 +1556,7 @@
           "Fusilli del Vento",
           "Carne di Xenodonte",
           "Teste di Idra",
+          "Marinatura Psionica",
           "Farina di Nettuno",
           "Gnocchi del Crepuscolo",
           "Vero Ghiaccio",
@@ -1572,8 +1565,7 @@
           "Nduja Fritta Tanto"
         ],
         "techniques": [
-          "Marinatura Psionica",
-          "Polarizzata a Freddo Iperbarico"
+          "Affumicatura Polarizzata a Freddo Iperbarico"
         ]
       }
     ],
@@ -1605,7 +1597,6 @@
           "Pane degli Abissi",
           "Foglie di Nebulosa",
           "Carne di Balena spaziale",
-          "Affettamento a Pulsazioni Quantistiche",
           "Colonia di Mycoflora",
           "Uova di Fenice",
           "Lacrime di Unicorno",
@@ -1613,8 +1604,7 @@
           "Congelamento Bio-Luminiscente Sincronico"
         ],
         "techniques": [
-          "Affettamento a Pulsazioni Quantistiche",
-          "Congelamento Bio-Luminiscente Sincronico"
+          "Affettamento a Pulsazioni Quantistiche"
         ]
       },
       {
@@ -1790,7 +1780,6 @@
         "ingredients": [
           "Pane di Luce",
           "Spore Quantiche",
-          "Proteine di mare e terra",
           "Essenza di Tachioni",
           "Farina di Nettuno",
           "Sferificazione tramite Matrici Biofotiche",
@@ -1806,15 +1795,17 @@
         "ingredients": [
           "Carne di mucca",
           "Nettare di Sirena",
-          "Cottura Idrodinamica Autoregolante",
-          "Proteine rigenerative delle teste di idra",
           "Decostruzione Magnetica Risonante",
           "Alghe Bioluminescenti",
           "Biscotti della Galassia",
           "Shard di Materia Oscura",
-          "Marinatura Temporale Sincronizzata dell'Essenza di Speziaria"
+          "Essenza di Speziaria"
         ],
-        "techniques": []
+        "techniques": [
+          "Marinatura Sotto Zero a Polarità Inversa",
+          "Cottura Idrodinamica Autoregolante",
+          "Bollitura Infrasonica Armonizzata"
+        ]
       },
       {
         "name": "Sinfonia Cosmica di Aurora",
@@ -1823,11 +1814,11 @@
           "Pane di Luce",
           "Granuli di Nebbia Arcobaleno",
           "Erba Pipa",
-          "Polvere di Pulsar",
-          "Incisione Elettromagnetica Plasmica"
+          "Polvere di Pulsar"
         ],
         "techniques": [
-          "Ebollizione Magneto-Cinetica Pulsante"
+          "Ebollizione Magneto-Cinetica Pulsante",
+          "Incisione Elettromagnetica Plasmica"
         ]
       },
       {
@@ -1853,11 +1844,11 @@
           "Carni di Xenodonte",
           "Radici di Singolarità",
           "Colonia di Mycoflora",
-          "Spore Quantiche",
-          "Congelamento Bio-Luminiscente Sincronico"
+          "Spore Quantiche"
         ],
         "techniques": [
-          "Amalgamazione Sintetica Molecolare"
+          "Amalgamazione Sintetica Molecolare",
+          "Congelamento Bio-Luminiscente Sincronico"
         ]
       },
       {
@@ -1868,12 +1859,10 @@
           "Amido di Stellarion",
           "Colonia di Mycoflora",
           "Polvere di Pulsar",
-          "Muffa Lunare",
-          "Cryo-Tessitura Energetica Polarizzata"
+          "Muffa Lunare"
         ],
         "techniques": [
-          "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
-          "Decostruzione Magnetica Risonante"
+          "Cottura a Vapore con Flusso di Particelle Isoarmoniche"
         ]
       },
       {
@@ -1884,14 +1873,14 @@
           "Fibra di Sintetex",
           "Radici di Gravità",
           "Colonia di Mycoflora",
-          "Marinatura Psionica",
           "Shard di Prisma Stellare",
           "Baccacedro",
           "Nduja Fritta Tanto",
-          "Pane di Luce",
           "Biscotti della Galassia"
         ],
-        "techniques": []
+        "techniques": [
+          "Marinatura Psionica"
+        ]
       },
       {
         "name": "Verso l'Inedito Oltre",
@@ -1932,8 +1921,7 @@
           "Lacrime di Andromeda"
         ],
         "techniques": [
-          "Marinatura Psionica",
-          "Bollitura termografica a rotazione veloce"
+          "Marinatura Psionica"
         ]
       }
     ],
@@ -2175,9 +2163,7 @@
           "Carne di Drago",
           "Pane di Luce",
           "Amido di Stellarion",
-          "Nettare di Sirena",
-          "Salsa Szechuan",
-          "verdure stagionali"
+          "Verdure stagionali"
         ],
         "techniques": [
           "Marinatura Temporale Sincronizzata",
@@ -2208,7 +2194,7 @@
           "Colonia di Mycoflora fermentata",
           "Shard di Prisma Stellare",
           "Alghe Bioluminescenti",
-          "funghi Orbitali",
+          "Funghi Orbitali",
           "Essenza di Speziaria"
         ],
         "techniques": [
@@ -2236,12 +2222,13 @@
         "name": "Nebulosa dell'Infinito: Un Viaggio attraverso il Cosmo del Gusto",
         "ingredients": [
           "Carne di Kraken",
-          "Spaghi del Sole",
+          "Tagliatelle Spaghi del Sole",
           "Granuli di Nebbia Arcobaleno",
           "Alghe Bioluminescenti",
+          "Fibra di Sintetex",
+          "Shard di Materia Oscura",
           "Pane di Luce",
-          "Nettare di Sirena",
-          "Salsa Szechuan interdimensionale"
+          "Nettare di Sirena"
         ],
         "techniques": [
           "Affumicatura Temporale Risonante",
@@ -2263,7 +2250,8 @@
         ],
         "techniques": [
           "Bollitura Entropica Sincronizzata",
-          "Affumicatura a Stratificazione Quantica"
+          "Cottura a vapore Risonante",
+          "Cottura Sottovuoto Bioma Sintetico"
         ]
       },
       {
@@ -2297,7 +2285,8 @@
         ],
         "techniques": [
           "Cottura Sottovuoto Frugale Energeticamente Negativa",
-          "Cottura a Vapore Termocinetica Multipla"
+          "Cottura con Microonde Entropiche Sincronizzate",
+          "Affumicatura a Stratificazione Quantica"
         ]
       },
       {
@@ -2325,8 +2314,8 @@
           "Lacrime di Unicorno"
         ],
         "techniques": [
-          "Affumicatura temporale risonante",
-          "Amalgamazione Sintetica Molecolare"
+          "Amalgamazione Sintetica Molecolare",
+          "Affumicatura temporale risonante"
         ]
       }
     ],
@@ -2403,8 +2392,8 @@
           "Granuli di Nebbia Arcobaleno",
           "Lacrime di Andromeda",
           "Uova di Fenice",
-          "Vero Ghiaccio",
-          "Essenza di Tachioni"
+          "Essenza di Tachioni",
+          "Vero Ghiaccio"
         ],
         "techniques": [
           "Tecnica di Sinergia Elettro-Osmotica Programmabile",
@@ -2417,10 +2406,9 @@
         "ingredients": [
           "Carne di Mucca",
           "Uova di Fenice",
-          "Nduja Fritta Tanto",
+          "Nettare di Sirena",
           "Fusilli del Vento",
-          "Pane degli Abissi",
-          "Polvere di Crononite"
+          "Pane degli Abissi"
         ],
         "techniques": [
           "Incisione Elettromagnetica Plasmica",
@@ -2448,10 +2436,8 @@
         "ingredients": [
           "Carne di mucca",
           "Gnocchi del Crepuscolo",
-          "Pane degli Abissi",
-          "Cristalli di Memoria",
+          "Cristalli di memoria",
           "Lacrime di Unicorno",
-          "Essenza di Vuoto",
           "Pane di Luce"
         ],
         "techniques": [
@@ -2480,8 +2466,8 @@
           "Carne di Balena Spaziale",
           "Foglie di Nebulosa",
           "Funghi dell’Etere",
-          "Sale Temporale",
-          "Polvere di Pulsar"
+          "Polvere di Pulsar",
+          "Sale Temporale"
         ],
         "techniques": [
           "Taglio a Risonanza Sonica Rigenerativa",
@@ -2497,12 +2483,12 @@
           "Colonia di Mycoflora",
           "Radici di Gravità",
           "Baccacedro",
-          "Prisma Stellare",
+          "Shard di Prisma Stellare",
           "Plasma Vitale"
         ],
         "techniques": [
           "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
-          "Pulsante Magneto-Cinetica",
+          "Cottura Pulsante Magneto-Cinetica",
           "Padella via Realtà Energetiche Parallele"
         ]
       },
@@ -2534,12 +2520,8 @@
         "grade": "IV"
       },
       {
-        "type": "Luce",
-        "grade": "III"
-      },
-      {
         "type": "Magnetica",
-        "grade": "I"
+        "grade": "III"
       },
       {
         "type": "Temporale",
@@ -2576,20 +2558,20 @@
       {
         "name": "Sinfonia dei Ricordi Celesti",
         "ingredients": [
-          "Carne di Balena spaziale",
-          "Granuli di nebbia arcobaleno",
-          "Impasto gravitazionale vorticoso",
-          "Polvere di crononite",
-          "Cristalli di sale temporale"
+          "carne di balena spaziale",
+          "granuli di nebbia arcobaleno",
+          "impasto gravitazionale vorticoso",
+          "polvere di crononite",
+          "cristalli di sale temporale"
         ],
         "techniques": [
-          "Cottura a vapore termocinetico multiplo"
+          "cotti a vapore termocinetico multiplo"
         ]
       },
       {
         "name": "Sinfonia del Cosmo",
         "ingredients": [
-          "Brodo di Liane di Plasmodio",
+          "brodo di Liane di Plasmodio",
           "Funghi Orbitali",
           "Fibra di Sintetex",
           "Foglie di Nebulosa",
@@ -2629,7 +2611,8 @@
           "Biscotti della Galassia"
         ],
         "techniques": [
-          "Microonde Entropiche Sincronizzate"
+          "Microonde Entropiche Sincronizzate",
+          "Cryo-Tessitura Energetica Polarizzata"
         ]
       },
       {
@@ -2651,7 +2634,7 @@
       {
         "name": "Sinfonia Crepuscolare",
         "ingredients": [
-          "Gnoccchi del Crepuscolo",
+          "Gnocchi del Crepuscolo",
           "Pane di Luce",
           "Biscotti della Galassia",
           "Spore Quantiche",
@@ -2659,18 +2642,19 @@
         ],
         "techniques": [
           "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
-          "Bollitura Termografica a Rotazione Veloce"
+          "Bollitura Termografica a Rotazione Veloce",
+          "Sinergia Elettro-Osmotica Programmabile"
         ]
       },
       {
         "name": "Sinfonia Celestiale dei Ricordi",
         "ingredients": [
-          "Biscotti della Galassia",
-          "Crema di Farina di Nettuno",
-          "Teste di Idra",
+          "biscotti della Galassia",
+          "Farina di Nettuno",
+          "teste di Idra",
           "Colonia di Mycoflora",
           "Spaghi del Sole",
-          "Zabaione stellare",
+          "Muffa Lunare",
           "Salsa Szechuan",
           "Shard di Materia Oscura"
         ],
@@ -2690,7 +2674,7 @@
           "Salsa Szechuan"
         ],
         "techniques": [
-          "Bollitura Termografica a Rotazione Veloce"
+          "bollitura termografica a rotazione veloce"
         ]
       }
     ],
@@ -2856,7 +2840,6 @@
           "Carne di Kraken",
           "Amido di Stellarion",
           "Granuli di Nebbia Arcobaleno",
-          "Farina di Nettuno",
           "Funghi Orbitali",
           "Erba Pipa"
         ],
@@ -2901,8 +2884,7 @@
         "techniques": [
           "Cottura a Vapore Termocinetica Multipla",
           "Bollitura Entropica Sincronizzata",
-          "Cottura con Microonde Entropiche Sincronizzate",
-          "Congelazione Iperdimensionalmente Stratificata"
+          "Cottura con Microonde Entropiche Sincronizzate"
         ]
       }
     ],
@@ -2910,7 +2892,7 @@
   },
   {
     "restaurant": "L'Etere del Gusto",
-    "chef": "Pierino Il Custode Temporali",
+    "chef": "Pierino \"Il Custode\" Temporali",
     "planet": "Pandora",
     "licenses": [
       {
@@ -2954,8 +2936,8 @@
         "techniques": [
           "Cottura a Vapore",
           "Flusso di Particelle Isoarmoniche",
-          "Congelamento Bio-Luminiscente Sincronico",
-          "Forno Dinamico Inversionale"
+          "Forno Dinamico Inversionale",
+          "Congelamento Bio-Luminiscente Sincronico"
         ]
       },
       {
@@ -2983,8 +2965,8 @@
           "Carne di Xenodonte",
           "Carne di Kraken",
           "Teste di Idra",
-          "Salsa Szechuan",
-          "Polvere di Stelle"
+          "Polvere di Stelle",
+          "Salsa Szechuan"
         ],
         "techniques": [
           "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
@@ -3015,7 +2997,6 @@
           "Farina di Nettuno",
           "Carne di Balena Spaziale",
           "Radici di Singolarità",
-          "Shard di Prisma Stellare",
           "Pane di Luce",
           "Uova di Fenice",
           "Nettare di Sirena",
@@ -3047,13 +3028,11 @@
           "Funghi Orbitali",
           "Farina di Nettuno",
           "Carne di Mucca",
-          "Fibra di Sintetex",
-          "Salsa Szechuan",
           "Alghe Bioluminescenti",
           "Polvere di Stelle",
           "Foglie di Mandragora",
           "Amido di Stellarion",
-          "Colonie di Mycoflora"
+          "Mycoflora"
         ],
         "techniques": [
           "Sottovuoto Antimateria",
@@ -3067,7 +3046,7 @@
           "Liane di Plasmodio",
           "Rosa di Lattuga Namecciana",
           "Risotto di Cassandra",
-          "Teste di Idra",
+          "Tartare di Teste di Idra",
           "Muffa Lunare"
         ],
         "techniques": [
@@ -3082,8 +3061,6 @@
           "Carne di Drago",
           "Carne di Mucca",
           "Biscotti della Galassia",
-          "Farina di Nettuno",
-          "Cristalli di Vero Ghiaccio",
           "Nettare di Sirena",
           "Salsa Szechuan"
         ],
@@ -3099,14 +3076,13 @@
           "Granuli di Nebbia Arcobaleno",
           "Carpaccio di Funghi Orbitali",
           "Gnocchi del Crepuscolo",
-          "Nduja Fritta Tanto",
+          "Sugo di Nduja Fritta Tanto",
           "Cristalli di Memoria",
           "Liane di Plasmodio"
         ],
         "techniques": [
           "Bollitura Termografica a Rotazione Veloce",
           "Decostruzione Atomica a Strati Energetici",
-          "Cottura a Vapore Ecodinamico Bilanciato",
           "Cryo-Tessitura Energetica Polarizzata"
         ]
       }
@@ -3115,7 +3091,7 @@
   },
   {
     "restaurant": "L'Oasi delle Dune Stellari",
-    "chef": "Alessandra Nova Celestini",
+    "chef": "Alessandra \"Nova\" Celestini",
     "planet": "Tatooine",
     "licenses": [
       {
@@ -3147,7 +3123,7 @@
         "grade": "I"
       }
     ],
-    "ltk": "IX",
+    "ltk": "9",
     "dishes": [
       {
         "name": "La Creazione di Nova",
@@ -3301,7 +3277,8 @@
         "techniques": [
           "Sferificazione tramite Matrici Biofotiche",
           "Ebollizione Magneto-Cinetica Pulsante",
-          "Affumicatura Polarizzata a Freddo Iperbarico"
+          "Affumicatura Polarizzata a Freddo Iperbarico",
+          "Cryo-Tessitura Energetica Polarizzata"
         ]
       }
     ],
@@ -3367,7 +3344,7 @@
           "Carne di Drago",
           "Foglie di Nebulosa",
           "Spaghi del Sole",
-          "Uovo di Fenice",
+          "uovo di Fenice",
           "Farina di Nettuno",
           "Amido di Stellarion",
           "Plasma Vitale"
@@ -3409,7 +3386,6 @@
         ],
         "techniques": [
           "Marinatura a Infusione Gravitazionale",
-          "Sinergia Elettro-Osmotica Programmabile",
           "Cottura Sottovuoto Frugale Energeticamente Negativa",
           "Affumicatura tramite Big Bang Microcosmico"
         ]
@@ -3418,13 +3394,13 @@
         "name": "Sinfonia Cosmica della Rinascita",
         "ingredients": [
           "Carne di Mucca",
-          "Uovo di Fenice",
+          "uovo di Fenice",
           "Foglie di Nebulosa",
           "Radici di Singolarità",
           "Granuli di Nebbia Arcobaleno",
           "Cristalli di Nebulite",
           "Spaghi del Sole",
-          "Biscotti della Galassia"
+          "biscotti della galassia"
         ],
         "techniques": [
           "Cottura Sottovuoto Antimateria",
@@ -3484,13 +3460,14 @@
           "Erba Pipa",
           "Teste di Idra",
           "Fusilli del Vento",
-          "Uova di Fenice"
+          "uova di Fenice"
         ],
         "techniques": [
           "Marinatura Temporale Sincronizzata",
           "Microonde Entropiche Sincronizzate",
           "Cottura Olografica Quantum Fluttuante",
-          "Cottura Sottovuoto Frugale Energeticamente Negativa"
+          "Cottura Sottovuoto Frugale Energeticamente Negativa",
+          "Decostruzione Interdimensionale Lovecraftiana"
         ]
       }
     ],
@@ -3541,14 +3518,15 @@
         "techniques": [
           "Fermentazione Quantica a Strati Multiversali",
           "Cottura Sottovuoto Multirealità Collassante",
-          "Taglio a Risonanza Sonica Rigenerativa"
+          "Taglio a Risonanza Sonica Rigenerativa",
+          "manipolazioni della Luce"
         ]
       },
       {
         "name": "Sinfonia Astrale",
         "ingredients": [
           "Riso di Cassandra",
-          "Teste di Idra",
+          "Brodo di Teste di Idra",
           "Carne di Xenodonte",
           "Polvere di Pulsar",
           "Lattuga Namecciana",
@@ -3556,6 +3534,7 @@
           "Farina di Nettuno"
         ],
         "techniques": [
+          "Cottura Sottovuoto Multirealità Collassante",
           "Bollitura Termografica a Rotazione Veloce",
           "Congelazione Iperdimensionalmente Stratificata"
         ]
@@ -3563,14 +3542,15 @@
       {
         "name": "Sinfonia Temporale Galattica",
         "ingredients": [
-          "Mycoflora",
+          "Colonies di Mycoflora",
           "Fibra di Sintetex",
           "Cristalli di Nebulite",
+          "Spore Quantiche",
           "Bacche di Baccacedro",
           "Sale Temporale"
         ],
         "techniques": [
-          "Cottura Sottovuoto",
+          "affettamento a pulsazioni quantistiche",
           "Cottura Olografica Quantum Fluttuante"
         ]
       },
@@ -3579,6 +3559,7 @@
         "ingredients": [
           "Amido di Stellarion",
           "Fusilli del Vento",
+          "Granuli di Nebbia Arcobaleno",
           "Carne di Xenodonte",
           "Carne di Kraken",
           "Carne di Mucca",
@@ -3600,11 +3581,12 @@
           "Radici di Singolarità",
           "Pane degli Abissi",
           "Funghi dell’Etere",
+          "Essenza di Vuoto",
           "Baccacedro caramellato"
         ],
         "techniques": [
-          "Cottura Sottovuoto Frugale Energeticamente Negativa",
-          "Affettamento a Pulsazioni Quantistiche"
+          "Affettamento a Pulsazioni Quantistiche",
+          "Cottura Sottovuoto Frugale Energeticamente Negativa"
         ]
       },
       {
@@ -3614,12 +3596,10 @@
           "Carne di Drago",
           "Muffa Lunare",
           "Polvere di Stelle",
-          "Essenza di Vuoto"
-        ],
-        "techniques": [
-          "Cottura Sottovuoto Multirealità Collassante",
+          "Essenza di Vuoto",
           "Fermentazione Quantico Biometrica"
-        ]
+        ],
+        "techniques": []
       },
       {
         "name": "Dimensioni di Sapori Infusi",
@@ -3650,8 +3630,9 @@
           "Vero Ghiaccio"
         ],
         "techniques": [
-          "Affettamento a Pulsazioni Quantistiche",
-          "Cottura con Microonde Entropiche Sincronizzate"
+          "affettamento a pulsazioni quantistiche",
+          "cottura con microonde entropiche sincronizzate",
+          "sottovuoto bioma sintetico"
         ]
       },
       {
@@ -3669,7 +3650,8 @@
         ],
         "techniques": [
           "Cottura Sottovuoto Frugale Energeticamente Negativa",
-          "Decostruzione Interdimensionale Lovecraftiana"
+          "Decostruzione Interdimensionale Lovecraftiana",
+          "Affettamento a Pulsazioni Quantistiche"
         ]
       }
     ],
@@ -3705,9 +3687,10 @@
           "Biscotti della Galassia"
         ],
         "techniques": [
-          "Marinatura psionica",
-          "Cottura a vapore termocinetica multipla",
-          "Affumicatura a stratificazione quantica"
+          "Marinatura Psionica",
+          "Cottura a Vapore Termocinetica Multipla",
+          "Affumicatura a Stratificazione Quantica",
+          "Cottura Sottovuoto Frugale Energeticamente Negativa"
         ]
       },
       {
@@ -3715,7 +3698,6 @@
         "ingredients": [
           "Carne di Balena Spaziale",
           "Pane di Luce",
-          "Granuli di Nebbia Arcobaleno",
           "Carne di Kraken",
           "Teste di Idra",
           "Fusilli del Vento",
@@ -3725,7 +3707,7 @@
         "techniques": [
           "Marinatura Psionica",
           "Fermentazione Quantico Biometrica",
-          "Saltato in padella"
+          "Cottura Classica"
         ]
       },
       {
@@ -3788,7 +3770,8 @@
         "techniques": [
           "Marinatura Psionica",
           "Cottura a Vapore Ecodinamico Bilanciato",
-          "Cottura a Vapore Termocinetica Multipla"
+          "Cottura a Vapore Termocinetica Multipla",
+          "Cottura Classica"
         ]
       },
       {
@@ -3818,9 +3801,9 @@
           "Pane di Luce"
         ],
         "techniques": [
-          "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
-          "Marinatura Psionica",
-          "Cottura a Vapore Termocinetica Multipla"
+          "Cottura a Vapore",
+          "Cottura con Microonde Entropiche Sincronizzate",
+          "Taglio a Risonanza Sonica Rigenerativa"
         ]
       },
       {
@@ -3834,7 +3817,8 @@
         ],
         "techniques": [
           "Cottura a Vapore Termocinetica Multipla",
-          "Cottura con Microonde Entropiche Sincronizzate"
+          "Cottura con Microonde Entropiche Sincronizzate",
+          "Cottura Classica"
         ]
       }
     ],
@@ -3858,7 +3842,7 @@
         "grade": "III"
       },
       {
-        "type": "Quantistica",
+        "type": "Tecnologica",
         "grade": "IV"
       }
     ],
@@ -3937,7 +3921,7 @@
           "Teste di Idra",
           "Fibra di Sintetex",
           "Biscotti della Galassia",
-          "Polvere di Stelle"
+          "Polvere di stelle"
         ],
         "techniques": [
           "Affumicatura a Stratificazione Quantica",
@@ -3949,18 +3933,18 @@
         "ingredients": [
           "Carne di Drago",
           "Spaghi del Sole",
-          "Paté di Carne di Kraken",
+          "Carne di Kraken",
           "Pane di Luce",
           "Uova di Fenice",
           "Amido di Stellarion",
           "Polvere di Pulsar",
-          "Affumicatura Psionica Sensoriale",
           "Spore Quantiche",
           "Nduja Fritta Tanto"
         ],
         "techniques": [
           "Cottura Sottovuoto Frugale Energeticamente Negativa",
-          "Fermentazione Quantico Biometrica"
+          "Fermentazione Quantico Biometrica",
+          "Affumicatura Psionica Sensoriale"
         ]
       },
       {
@@ -3976,7 +3960,6 @@
         ],
         "techniques": [
           "Cottura a Vapore Ecodinamico Bilanciato",
-          "Sferificazione Cromatica Interdimensionale",
           "Bollitura Termografica a Rotazione Veloce"
         ]
       },
@@ -4240,7 +4223,7 @@
       {
         "name": "Odissea Temporale",
         "ingredients": [
-          "Carne di Drago",
+          "Bistecca di Carne di Drago",
           "Carne di Mucca",
           "Foglie di Mandragora",
           "Lacrime di Unicorno",
@@ -4275,11 +4258,12 @@
           "succo di Baccacedro",
           "Pane degli Abissi",
           "Sale Temporale",
-          "polvere di luce"
+          "Polvere di Luce"
         ],
         "techniques": [
+          "Campi Magnetici Entropici",
           "Grigliatura Elettro-Molecolare a Spaziatura Variabile",
-          "Luminante"
+          "Trattamento Luminante"
         ]
       },
       {
@@ -4319,12 +4303,9 @@
         "name": "Sinfonia Celestiale di Gnocchi del Crepuscolo",
         "ingredients": [
           "Gnocchi del Crepuscolo",
-          "Cristalli di Nebulite",
-          "Carne di Xenodonte",
-          "Carne di Balena spaziale",
-          "Alghe Bioluminescenti",
-          "Amido di Stellarion",
-          "Essenza di Tachioni",
+          "Essenza di Speziaria",
+          "Nebbia Arcobaleno",
+          "Farina di Nettuno",
           "Shard di Materia Oscura",
           "Foglie di Mandragora"
         ],
@@ -4332,7 +4313,8 @@
           "Impasto a Campi Magnetici Dualistici",
           "Marinatura tramite Reazioni d'Antimateria Diluite",
           "Affumicatura Temporale Risonante",
-          "Ebollizione Magneto-Cinetica Pulsante"
+          "Ebollizione Magneto-Cinetica Pulsante",
+          "Amalgamazione Sintetica Molecolare"
         ]
       },
       {
@@ -4356,15 +4338,14 @@
         "name": "Il Viaggio dell'Etereo Risveglio",
         "ingredients": [
           "Gnocchi del Crepuscolo",
-          "Cristalli di Nebulite",
           "Carne di Xenodonte",
           "Carne di Balena spaziale",
           "Alghe Bioluminescenti",
-          "Fibra di Sintetex",
           "Amido di Stellarion",
           "Essenza di Tachioni"
         ],
         "techniques": [
+          "Amalgamazione Sintetica Molecolare",
           "sferificazione filamentare a molecole vibrazionali",
           "cottura a vapore termocinetica multipla"
         ]
@@ -4373,7 +4354,7 @@
         "name": "Sinfonia Cosmica di Mare e Stelle",
         "ingredients": [
           "Carne di Kraken",
-          "Carne di Xenodonte",
+          "purè di Carne di Xenodonte",
           "Salsa Szechuan",
           "Carne di Balena spaziale",
           "Lacrime di Andromeda"
@@ -4764,25 +4745,6 @@
         ]
       },
       {
-        "name": "Evanescenza Quantica",
-        "ingredients": [
-          "Cristalli di Memoria",
-          "Radici di Singolarità",
-          "Lattuga Namecciana",
-          "Baccacedro",
-          "Granuli di Nebbia Arcobaleno",
-          "Plasma Vitale",
-          "Petali di Eco"
-        ],
-        "techniques": [
-          "Cottura Sottovuoto Frugale Energeticamente Negativa",
-          "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
-          "Bollitura Termografica a Rotazione Veloce",
-          "Affumicatura a Stratificazione Quantica",
-          "Saltare in Padella Classica"
-        ]
-      },
-      {
         "name": "Galassia di Sapori Sublimi",
         "ingredients": [
           "Frammenti di Supernova",
@@ -4921,8 +4883,8 @@
           "Teste di Idra",
           "Lacrime di Andromeda",
           "Riso di Cassandra",
-          "Spezie Melange",
-          "Pane degli Abissi"
+          "pane degli Abissi",
+          "Spezie Melange"
         ],
         "techniques": [
           "Cottura a Vapore Termocinetica Multipla",
@@ -4935,13 +4897,13 @@
         "ingredients": [
           "Lattuga Namecciana",
           "Carne di Drago",
-          "Polvere di Stelle",
+          "polvere di stelle",
           "Spore Quantiche",
           "Essenza di Vuoto"
         ],
         "techniques": [
           "Bollitura Termografica a Rotazione Veloce",
-          "Sinergia elettro-osmotica programmabile"
+          "sinergia elettro-osmotica programmabile"
         ]
       },
       {
@@ -4955,7 +4917,9 @@
           "Amalgamazione Sintetica Molecolare",
           "Colonia di Mycoflora"
         ],
-        "techniques": []
+        "techniques": [
+          "Cryo-Tessitura Energetica Polarizzata"
+        ]
       },
       {
         "name": "Piastrella Celestiale di Gnocchi del Crepuscolo con Nebulosa di Riso di Cassandra, Lacrime di Unicorno e Velo di Materia Oscura",
@@ -5491,8 +5455,7 @@
         ],
         "techniques": [
           "Cottura Olografica Quantum Fluttuante",
-          "Affumicatura Psionica Sensoriale",
-          "Decostruzione Interdimensionale Lovecraftiana"
+          "Affumicatura Psionica Sensoriale"
         ]
       },
       {
@@ -5559,6 +5522,7 @@
         "techniques": [
           "Taglio a Risonanza Sonica Rigenerativa",
           "Decostruzione Magnetica Risonante",
+          "Decostruzione Interdimensionale Lovecraftiana",
           "Cottura Sottovuoto Bioma Sintetico"
         ]
       },
@@ -5569,8 +5533,7 @@
           "Cristalli di Nebulite",
           "Alghe Bioluminescenti",
           "Lattuga Namecciana",
-          "Uova di Fenice",
-          "Muffa Lunare"
+          "Uova di Fenice"
         ],
         "techniques": [
           "Marinatura Temporale Sincronizzata",
@@ -5588,7 +5551,7 @@
           "Lacrime di Unicorno"
         ],
         "techniques": [
-          "Risonanza Sonica Rigenerativa",
+          "Taglio a Risonanza Sonica Rigenerativa",
           "Pulsazioni Quantistiche",
           "Marinatura Sotto Zero a Polarità Inversa"
         ]
@@ -5617,12 +5580,12 @@
           "Carne di Balena spaziale",
           "Lacrime di Unicorno",
           "Cristalli di Memoria",
-          "Pane degli Abissi",
-          "Sale Temporale"
+          "Pane degli Abissi"
         ],
         "techniques": [
           "Impasto a Campi Magnetici Dualistici",
           "Decostruzione Magnetica Risonante",
+          "Ebollizione Magneto-Cinetica Pulsante",
           "Cottura Olografica Quantum Fluttuante"
         ]
       }
